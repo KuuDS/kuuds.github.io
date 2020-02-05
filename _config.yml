@@ -100,9 +100,9 @@ theme: cactus
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:KuuDS/kuuds.github.io.git
-  branch: master
-  message: Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }}) 
+  repo: git@github.com:KuuDS/hexo-blog.git
+  branch: gh-pages
+  message: Site updated:\ {{ now('YYYY-MM-DD HH:mm:ss') }}
 # Theme configs
 theme_config:
   nav:
