@@ -17,6 +17,669 @@
     
     
     <entry>
+      <title>63</title>
+      <link href="/2020/02/63/"/>
+      <url>/2020/02/63/</url>
+      
+        <content type="html"><![CDATA[<hr><p>title: expect根据终端窗口大小调整buffer行列<br>date: 2018-10-22 09:59:00<br>updated: %s<br>—<!--markdown--><code>trap { set rows [stty rows] set cols [stty columns] stty rows $rows columns $cols &lt; $spawn_out(slave,name)} WINCH</code></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>64</title>
+      <link href="/2020/02/64/"/>
+      <url>/2020/02/64/</url>
+      
+        <content type="html"><![CDATA[<hr><p>title: Nginx Settings Markup<br>date: 2018-11-27 13:48:49<br>updated: %s<br>—<!--markdown--># Use Case</p><h2 id="Directory-views"><a href="#Directory-views" class="headerlink" title="Directory views"></a>Directory views</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">autoindex             on; # on&#x2F;off </span><br><span class="line"></span><br><span class="line">autoindex_exact_size off; # on&#x2F;off</span><br><span class="line"></span><br><span class="line">autoindex_localtime   on; # on&#x2F;off</span><br></pre></td></tr></table></figure><h2 id="Reverse-proxy"><a href="#Reverse-proxy" class="headerlink" title="Reverse proxy"></a>Reverse proxy</h2>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>65</title>
+      <link href="/2020/02/65/"/>
+      <url>/2020/02/65/</url>
+      
+        <content type="html"><![CDATA[<hr><p>title: use relative path for tar package<br>date: 2019-01-02 16:43:41<br>updated: %s<br>—<!--markdown--><code>tar [/path/to/dst/package_name]  -C [relative/path] [src_file]</code></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>66</title>
+      <link href="/2020/02/66/"/>
+      <url>/2020/02/66/</url>
+      
+        <content type="html"><![CDATA[<hr><p>title: limit docker disk usage<br>date: 2019-01-05 14:06:33<br>updated: %s<br>—<!--markdown-->```<br>xxxx:<br>  image: nginx:1.12.1<br>  restart: always</p><p>  logging:<br>    driver: “json-file”<br>    options:<br>      max-size: “5g”<br>```</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>67</title>
+      <link href="/2020/02/67/"/>
+      <url>/2020/02/67/</url>
+      
+        <content type="html"><![CDATA[<hr><p>title: msys2 git settings<br>date: 2019-01-10 22:15:05<br>updated: %s<br>—<!--markdown-->&gt; <a href="https://github.com/Microsoft/vscode/issues/4651" target="_blank" rel="noopener">GITHUB ISSUE</a></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">setlocal</span><br><span class="line"></span><br><span class="line">rem If you don&#39;t add path for msys2 into %PATH%, enable following line.</span><br><span class="line">rem set PATH&#x3D;c:\msys64\usr\bin;%PATH%</span><br><span class="line"></span><br><span class="line">if &quot;%1&quot; equ &quot;rev-parse&quot; goto rev_parse</span><br><span class="line">git %*</span><br><span class="line">goto :eof</span><br><span class="line">:rev_parse</span><br><span class="line">for &#x2F;f %%1 in (&#39;git %*&#39;) do cygpath -w %%1</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>69</title>
+      <link href="/2020/02/69/"/>
+      <url>/2020/02/69/</url>
+      
+        <content type="html"><![CDATA[<hr><p>title: file check on windows<br>date: 2019-03-08 11:13:00<br>updated: %s<br>—<!--markdown-->```batch<br>powershell get-filehash -algorithm md5 <file_to_check></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;batch</span><br><span class="line">certUtil -hashfile pathToFileToCheck [HashAlgorithm]</span><br></pre></td></tr></table></figure><p>HashAlgorithm choices: MD2 MD4 MD5 SHA1 SHA256 SHA384 SHA512</p><p><a href="https://superuser.com/questions/245775/is-there-a-built-in-checksum-utility-on-windows-7" target="_blank" rel="noopener">StackExchange</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>7</title>
+      <link href="/2020/02/7/"/>
+      <url>/2020/02/7/</url>
+      
+        <content type="html"><![CDATA[<hr><p>title: js传值<br>date: 2015-11-12 13:15:00<br>updated: %s<br>—<!--markdown-->```<br>document.getElementById(‘id’).value=”value”;</p><pre><code></code></pre>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>8</title>
+      <link href="/2020/02/8/"/>
+      <url>/2020/02/8/</url>
+      
+        <content type="html"><![CDATA[<hr><p>title: windows路由表设置<br>date: 2015-11-18 15:11:00<br>updated: %s<br>—<!--markdown--># 情景<br>公司前置机双网卡，连接到两个局域网<br><code>A网卡</code>ip:<code>172.16.X.X</code><br><code>B网卡</code>ip:<code>158.2.X.X</code></p><p>两个网络中都有<code>192.168.X.X</code><br>现业务仅需要使用A网络中的目标机器</p><p>命令:<code>route add [ip机器] [掩码] [网关] [接口] metric [跃点数] -p</code><br><code>接口</code> 链路中下一个传递的目标(一般把设置为网卡的网关)<br><code>-p</code>  永久选项，测试时应先不使用该参数(重启后，该规则会自动清楚)，完成测试后再加入该选项</p><p>备忘<br>*<code>ROUTE ADD 192.123.0.0 MASK 255.255.0.0. 192.123.172.250 if 3</code><br>*<code>if</code>处的参数可以通过<code>route print</code>命令打印结果的开头找到对应值`</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>9</title>
+      <link href="/2020/02/9/"/>
+      <url>/2020/02/9/</url>
+      
+        <content type="html"><![CDATA[<hr><p>title: Eclipse备忘<br>date: 2015-11-19 18:42:00<br>updated: %s<br>—<!--markdown--># Tips</p><ul><li>断点不生效<br>  在<code>run</code>菜单里面，把<code>skip all breakpoints</code><br>  快捷键<code>Ctrl</code>+<code>Alt</code>+<code>B</code></li></ul><h1 id="快捷键备忘"><a href="#快捷键备忘" class="headerlink" title="快捷键备忘"></a>快捷键备忘</h1><ul><li><p><code>Ctrl</code>+<code>O</code><br>  打开当前类的方法列表</p></li><li><p><code>Ctrl</code>+<code>T</code><br>打开光标处方法的继承列表</p></li><li><p><code>Ctrl</code>+<code>Shift</code>+<code>T</code><br>打开在工作空间内查找类型（包括所有项目中的类，引用JAR包中的类</p></li></ul>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>24</title>
+      <link href="/2020/02/24/"/>
+      <url>/2020/02/24/</url>
+      
+        <content type="html"><![CDATA[<hr><p>title: mysql5.7非安装版本初始化<br>date: 2016-07-10 08:56:00<br>updated: %s<br>—<!--markdown-->MySQL5.7.6后，下载版的初始化操作备忘<br>=================================</p><blockquote><p>As of MySQL 5.7.6, if you initialized the data directory manually using mysqld –initialize and followed the instructions in Section 2.10.1.1, “Initializing the Data Directory Manually Using mysqld”, you should have assigned a password to the initial account. </p></blockquote><p>上文引用自<a href="http://dev.mysql.com/doc/refman/5.7/en/default-privileges.html" target="_blank" rel="noopener">MySQL文档</a><br>出于安全考虑,配置<code>my.cnf</code>后，需要输入</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bin/mysqld --initialize</span><br></pre></td></tr></table></figure><p>初始化<code>database</code>文件夹,默认会给本地<code>root</code>用户生成一个随机的密码,因此需要一些额外的操作。</p><p>以下操作在Linux中完成,Win环境大同小异，参考<a href="http://dev.mysql.com/doc/refman/5.7/en/data-directory-initialization-mysqld.html" target="_blank" rel="noopener">官方文档</a></p><h1 id="使用-initialize-insecure"><a href="#使用-initialize-insecure" class="headerlink" title="使用--initialize-insecure"></a>使用<code>--initialize-insecure</code></h1><p>配置好<code>my.cnf</code>后，使用<code>initialize-insecure</code>参数初始化即可</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bin/mysqld --initialize-insecure --user=mysql</span><br></pre></td></tr></table></figure><p>其中<code>user</code>为执行<code>mysqld</code>的用户</p><h1 id="使用-initialize"><a href="#使用-initialize" class="headerlink" title="使用--initialize"></a>使用<code>--initialize</code></h1><p>同样配置好<code>my.cnf</code>后</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bin/mysql --initalize --user=mysql</span><br></pre></td></tr></table></figure><p>这时mysql会为root用户生成一个随机的密码，并显示如下</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[Warning] A temporary password is generated for root@localhost:</span><br><span class="line">&#123;PASSWORD&#125;</span><br></pre></td></tr></table></figure><p>如果忘记了密码，可以使用<code>init-file</code>参数启动mysqld，修改密码</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bin/mysqld --init-file /path/to/init/file</span><br></pre></td></tr></table></figure><p>init-file如下,其中{PASSWORD}修改为新密码:</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">USER</span> <span class="string">'root'</span>@<span class="string">'localhost'</span> <span class="keyword">IDENTIFIED</span> <span class="keyword">BY</span> <span class="string">'&#123;PASSWORD&#125;'</span>;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>26</title>
+      <link href="/2020/02/26/"/>
+      <url>/2020/02/26/</url>
+      
+        <content type="html"><![CDATA[<hr><p>title: [自用]kcptun启动脚本<br>date: 2016-12-21 15:48:00<br>updated: %s<br>—<!--markdown-->修改自MEOW</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"><span class="comment">### BEGIN INIT INFO</span></span><br><span class="line"><span class="comment"># Provides:          Kcptun_client</span></span><br><span class="line"><span class="comment"># Required-Start:    $network</span></span><br><span class="line"><span class="comment"># Required-Stop:     $network</span></span><br><span class="line"><span class="comment"># Default-Start:     2 3 4 5</span></span><br><span class="line"><span class="comment"># Default-Stop:      0 1 6</span></span><br><span class="line"><span class="comment"># Short-Description: Kcptun Client</span></span><br><span class="line"><span class="comment">### END INIT INFO</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Put this script under /etc/init.d/, then run "update-rc.d kcptun defaults".</span></span><br><span class="line"></span><br><span class="line">BIN=/usr/bin/client_linux_amd64</span><br><span class="line">USER=nobody</span><br><span class="line">GROUP=nobody</span><br><span class="line">PID_DIR=/var/run</span><br><span class="line">PID_FILE=<span class="variable">$PID_DIR</span>/kcptun.pid</span><br><span class="line">LOG_FILE=/var/<span class="built_in">log</span>/kcptun</span><br><span class="line">CONF_FILE=/etc/kcptun.json</span><br><span class="line"></span><br><span class="line">RET_VAL=0</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">check_running</span></span>() &#123;</span><br><span class="line">  <span class="keyword">if</span> [[ -r <span class="variable">$PID_FILE</span> ]]; <span class="keyword">then</span></span><br><span class="line">    <span class="built_in">read</span> PID &lt;<span class="variable">$PID_FILE</span></span><br><span class="line">    <span class="keyword">if</span> [[ -d <span class="string">"/proc/<span class="variable">$PID</span>"</span> ]]; <span class="keyword">then</span></span><br><span class="line">      <span class="built_in">return</span> 0</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">      rm -f <span class="variable">$PID_FILE</span></span><br><span class="line">      <span class="built_in">return</span> 1</span><br><span class="line">    <span class="keyword">fi</span></span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">    <span class="built_in">return</span> 2</span><br><span class="line">  <span class="keyword">fi</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">do_status</span></span>() &#123;</span><br><span class="line">  check_running</span><br><span class="line">  <span class="keyword">case</span> $? <span class="keyword">in</span></span><br><span class="line">    0)</span><br><span class="line">      <span class="built_in">echo</span> <span class="string">"kcptun running with PID <span class="variable">$PID</span>"</span></span><br><span class="line">      ;;</span><br><span class="line">    1)</span><br><span class="line">      <span class="built_in">echo</span> <span class="string">"kcptun not running, remove PID file <span class="variable">$PID_FILE</span>"</span></span><br><span class="line">      ;;</span><br><span class="line">    2)</span><br><span class="line">      <span class="built_in">echo</span> <span class="string">"Could not find PID file <span class="variable">$PID_FILE</span>, kcptun does not appear to be running"</span></span><br><span class="line">      ;;</span><br><span class="line">  <span class="keyword">esac</span></span><br><span class="line">  <span class="built_in">return</span> 0</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">do_start</span></span>() &#123;</span><br><span class="line">  <span class="keyword">if</span> [[ ! -d <span class="variable">$PID_DIR</span> ]]; <span class="keyword">then</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"creating PID dir"</span></span><br><span class="line">    mkdir <span class="variable">$PID_DIR</span> || <span class="built_in">echo</span> <span class="string">"failed creating PID directory <span class="variable">$PID_DIR</span>"</span>; <span class="built_in">exit</span> 1</span><br><span class="line">    chown <span class="variable">$USER</span>:<span class="variable">$GROUP</span> <span class="variable">$PID_DIR</span> || <span class="built_in">echo</span> <span class="string">"failed creating PID directory <span class="variable">$PID_DIR</span>"</span>; <span class="built_in">exit</span> 1</span><br><span class="line">    chmod 0770 <span class="variable">$PID_DIR</span></span><br><span class="line">  <span class="keyword">fi</span></span><br><span class="line">  <span class="keyword">if</span> check_running; <span class="keyword">then</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"kcptun already running with PID <span class="variable">$PID</span>"</span></span><br><span class="line">    <span class="built_in">return</span> 0</span><br><span class="line">  <span class="keyword">fi</span></span><br><span class="line">  <span class="built_in">echo</span> <span class="string">"starting kcptun"</span></span><br><span class="line">  <span class="comment"># sudo will set the group to the primary group of $USER</span></span><br><span class="line">  <span class="comment">#sleep 220</span></span><br><span class="line">  sudo -u <span class="variable">$USER</span> -H -- <span class="variable">$BIN</span> -c <span class="variable">$CONF_FILE</span> &gt;<span class="variable">$LOG_FILE</span> 2&gt;&amp;1 &amp;</span><br><span class="line">  PID=$!</span><br><span class="line">  <span class="built_in">echo</span> <span class="variable">$PID</span> &gt; <span class="variable">$PID_FILE</span></span><br><span class="line">  sleep 0.3</span><br><span class="line">  <span class="keyword">if</span> ! check_running; <span class="keyword">then</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"start failed"</span></span><br><span class="line">    <span class="built_in">return</span> 1</span><br><span class="line">  <span class="keyword">fi</span></span><br><span class="line">  <span class="built_in">echo</span> <span class="string">"kcptun running with PID <span class="variable">$PID</span>"</span></span><br><span class="line">  <span class="built_in">return</span> 0</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">do_stop</span></span>() &#123;</span><br><span class="line">  <span class="keyword">if</span> check_running; <span class="keyword">then</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"stopping kcptun with PID <span class="variable">$PID</span>"</span></span><br><span class="line">    <span class="built_in">kill</span> <span class="variable">$PID</span></span><br><span class="line">    rm -f <span class="variable">$PID_FILE</span></span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"Could not find PID file <span class="variable">$PID_FILE</span>"</span></span><br><span class="line">  <span class="keyword">fi</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">do_restart</span></span>() &#123;</span><br><span class="line">  do_stop</span><br><span class="line">  do_start</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">case</span> <span class="string">"<span class="variable">$1</span>"</span> <span class="keyword">in</span></span><br><span class="line">  start|stop|restart|status)</span><br><span class="line">    do_<span class="variable">$1</span></span><br><span class="line">    ;;</span><br><span class="line">  *)</span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"Usage: kcptun &#123;start|stop|restart|status&#125;"</span></span><br><span class="line">    RET_VAL=1</span><br><span class="line">    ;;</span><br><span class="line"><span class="keyword">esac</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">exit</span> <span class="variable">$RET_VAL</span></span><br></pre></td></tr></table></figure><p>复制到<code>/etc/init.d/kcptun</code></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>27</title>
+      <link href="/2020/02/27/"/>
+      <url>/2020/02/27/</url>
+      
+        <content type="html"><![CDATA[<hr><p>title: [备忘]TODO.txt-cli<br>date: 2017-01-16 16:45:00<br>updated: %s<br>—<!--markdown-->[ME]Todo.sh<br>==============</p><h1 id="Alias-amp-Auto-Complete"><a href="#Alias-amp-Auto-Complete" class="headerlink" title="Alias &amp; Auto Complete"></a>Alias &amp; Auto Complete</h1><p>Add to the end of <code>.bashrc</code></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># alias</span><br><span class="line">alias t&#x3D;&#39;&#x2F;home&#x2F;yi&#x2F;.local&#x2F;bin&#x2F;todo.sh -d &#x2F;home&#x2F;yi&#x2F;.config&#x2F;todo.actions.d&#x2F;todo.cfg&#39;</span><br><span class="line">export TODOTXT_SORT_COMMAND&#x3D;&#39;env LC_COLLATE&#x3D;C sort -k 2,2 -k 1,1n&#39;</span><br><span class="line">complete -F _todo t</span><br></pre></td></tr></table></figure><h1 id="Command"><a href="#Command" class="headerlink" title="Command"></a>Command</h1><p>native:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">t lsprj                             <span class="comment"># 打印计划</span></span><br><span class="line">t <span class="keyword">do</span> [item_no]                      <span class="comment"># 完成</span></span><br><span class="line">t aricheve                          <span class="comment"># 归档</span></span><br><span class="line">t replace [item_no] [描述]          <span class="comment"># 替换</span></span><br></pre></td></tr></table></figure><p><a href="https://github.com/tonipenya/todo.txt-cli/blob/addons/.todo.actions.d/pri" target="_blank" rel="noopener">pri</a>:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">t pri [item_no] [A-Z]               # 更换权限</span><br></pre></td></tr></table></figure><p><a href="https://github.com/timpulver/todo.txt-graph" target="_blank" rel="noopener">graph</a>:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">t graph [days]                      # 输出统计图像</span><br></pre></td></tr></table></figure><p><a href="https://github.com/gr0undzer0/xp" target="_blank" rel="noopener">xp</a>:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">t xp  [days]                        # 打印报告</span><br></pre></td></tr></table></figure><p><a href="http://github.com/markwu/todo-cli-plugins" target="_blank" rel="noopener">view</a>:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">t view future                       <span class="comment"># 未来几天的任务</span></span><br><span class="line">t view project [PROJECT]            <span class="comment"># 按计划分组打印</span></span><br><span class="line">t view context [CONTEXT]            <span class="comment"># 按情景分组打印</span></span><br><span class="line">t view context today                <span class="comment"># 打印今天的任务 </span></span><br><span class="line">t view ?[time]                      <span class="comment"># 打印在指定的时间</span></span><br><span class="line">                                    <span class="comment"># ？为+,-</span></span><br><span class="line">                                    <span class="comment"># [time] 为 1DAYS 2WEEKS</span></span><br></pre></td></tr></table></figure><p><a href="http://github.com/FND/todo.txt-cli/blob/extensions/futureTasks" target="_blank" rel="noopener">schedule</a>:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">t schedule [itemno] [action] [time] # 添加日期</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>28</title>
+      <link href="/2020/02/28/"/>
+      <url>/2020/02/28/</url>
+      
+        <content type="html"><![CDATA[<hr><p>title: 时间管理<br>date: 2017-01-18 11:10:04<br>updated: %s<br>—<!--markdown-->1. 任务采用nozbe管理<br>2. nozbe总结出任务后，当天将任务列入<code>Todo.txt</code><br>3. 生产采用Tomato方式<br>4. 完成任务后<code>Todo.txt</code>对应任务打上<code>done</code>标记，并结束相关nozbe相关任务<br>5. 当天生产工作结束后，<code>archieve</code> 并回顾在nozbe添加评论</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>29</title>
+      <link href="/2020/02/29/"/>
+      <url>/2020/02/29/</url>
+      
+        <content type="html"><![CDATA[<hr><p>title: Eclipse自用笔记<br>date: 2017-02-10 10:27:00<br>updated: %s<br>—<!--markdown-->1. <code>EOS</code>下修改在系统浏览器里显示文件<br><code>General</code>-<code>Workspace</code>在<code>Command for launching system explorer</code>值修改为</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pantheon-files $&#123;selected_resource_parent_loc&#125;</span><br></pre></td></tr></table></figure><!-- 2. 插件附录 -->]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>3</title>
+      <link href="/2020/02/3/"/>
+      <url>/2020/02/3/</url>
+      
+        <content type="html"><![CDATA[<hr><p>title: Iptables规则备忘<br>date: 2015-10-03 16:05:00<br>updated: %s<br>categories:</p><ul><li>linux</li><li>–<!--markdown-->VPS设置</li></ul><hr><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">iptables -I INPUT 1 -m state --state RELATED,ESTABLISHED -j ACCEPT &amp;&amp; \</span><br><span class="line">iptables -I INPUT 2 -i lo -j ACCEPT &amp;&amp; \</span><br><span class="line">iptables -A INPUT -p tcp -m state --state NEW -m tcp --dport 80 -j ACCEPT &amp;&amp; \</span><br><span class="line">iptables -A INPUT -p tcp -m state --state NEW -m tcp --dport 443 -j ACCEPT &amp;&amp; \</span><br><span class="line">iptables -A INPUT -p tcp -m state --state NEW -m tcp --dport 22222 -j ACCEPT &amp;&amp; \</span><br><span class="line">iptables -A INPUT -p tcp --dport 80 -m limit --limit 25&#x2F;minute --limit-burst 100 -j ACCEPT &amp;&amp; \</span><br><span class="line">iptables -A INPUT -p tcp --dport 443 -m limit --limit 25&#x2F;minute --limit-burst 100 -j ACCEPT &amp;&amp; \</span><br><span class="line">iptables -A INPUT -p tcp --dport 22222 -m limit --limit 25&#x2F;minute --limit-burst 100 -j ACCEPT &amp;&amp; \</span><br><span class="line">iptables -P INPUT DROP &amp;&amp; \</span><br><span class="line">iptables -A FORWARD -p tcp --tcp-flags SYN,ACK,FIN,RST RST -m limit --limit 6&#x2F;s -j ACCEPT &amp;&amp; \</span><br><span class="line">iptables -A FORWARD -p icmp --icmp-type echo-request -m limit --limit 6&#x2F;s -j ACCEPT</span><br></pre></td></tr></table></figure><h2 id="公司工作站"><a href="#公司工作站" class="headerlink" title="公司工作站"></a>公司工作站</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">iptables -I INPUT 1 -m state --state RELATED,ESTABLISHED -j ACCEPT &amp;&amp; \</span><br><span class="line">iptables -I INPUT 2 -i lo -j ACCEPT &amp;&amp; \</span><br><span class="line">iptables -A INPUT -p tcp -m state --state NEW -m tcp --dport 22 -j ACCEPT &amp;&amp; \</span><br><span class="line">iptables -A INPUT -p tcp -m state --state NEW -m tcp --dport 80 -j ACCEPT &amp;&amp; \</span><br><span class="line">iptables -A INPUT -p tcp -m state --state NEW -m tcp --dport 443 -j ACCEPT &amp;&amp; \</span><br><span class="line">iptables -A INPUT -p tcp -m state --state NEW -m tcp --dport 3306 -j ACCEPT &amp;&amp; \</span><br><span class="line">iptables -A INPUT -p tcp -m state --state NEW -m tcp --dport 8080 -j ACCEPT &amp;&amp; \</span><br><span class="line">iptables -A INPUT -p tcp -m state --state NEW -m tcp --dport 8090 -j ACCEPT &amp;&amp; \</span><br><span class="line">iptables -A INPUT -p tcp -m state --state NEW -m tcp --dport 8100 -j ACCEPT &amp;&amp; \</span><br><span class="line">iptables -P INPUT DROP &amp;&amp; \</span><br><span class="line">iptables -A FORWARD -p tcp --tcp-flags SYN,ACK,FIN,RST RST -m limit --limit 6&#x2F;s -j ACCEPT &amp;&amp; \</span><br><span class="line">iptables -A FORWARD -p icmp --icmp-type echo-request -m limit --limit 6&#x2F;s -j ACCEPT &amp;&amp; \</span><br><span class="line">iptables -t nat -A PREROUTING -d 192.168.20.248 -p tcp --dport 8080 -j DNAT --to-destination 192.168.20.247:3389 &amp;&amp; \</span><br><span class="line">iptables -t nat -A POSTROUTING -d 192.168.20.247 -p tcp --dport 3389 -j SNAT --to-source 192.168.20.248</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>31</title>
+      <link href="/2020/02/31/"/>
+      <url>/2020/02/31/</url>
+      
+        <content type="html"><![CDATA[<hr><p>title: 关于UNZIP解压<br>date: 2017-06-06 14:22:38<br>updated: %s<br>—<!--markdown-->遇到中文乱码问题</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$:unizp -O cp936 filename</span><br></pre></td></tr></table></figure><p><a href="https://en.wikipedia.org/wiki/Code_page_936" target="_blank" rel="noopener">cp936介绍</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>33</title>
+      <link href="/2020/02/33/"/>
+      <url>/2020/02/33/</url>
+      
+        <content type="html"><![CDATA[<hr><p>title: git setting<br>date: 2017-06-27 15:40:00<br>updated: %s<br>—<!--markdown-->## PROXY SETTINGS<br>  According to the protocol used, settings get differences: </p><ol><li><code>git</code>: <code>core.gitproxy</code> </li><li><code>ssh</code>: set in ssh’s <code>ProxyCommand</code> parameter</li><li><code>http</code>: <code>http.proxy</code></li></ol><h3 id="Example"><a href="#Example" class="headerlink" title="Example:"></a>Example:</h3>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># global proxy</span></span><br><span class="line">git config --global http.proxy http://url:port</span><br><span class="line"></span><br><span class="line"><span class="comment"># unset proxy</span></span><br><span class="line">git config --global --<span class="built_in">unset</span> http.proxy</span><br><span class="line"></span><br><span class="line"><span class="comment"># disable SSL verify</span></span><br><span class="line">git config --global http.sslVerify <span class="literal">false</span></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>34</title>
+      <link href="/2020/02/34/"/>
+      <url>/2020/02/34/</url>
+      
+        <content type="html"><![CDATA[<hr><p>title: pandora 14.09 opkg source<br>date: 2017-08-22 22:34:50<br>updated: %s<br>—<!--markdown-->    dest root /<br>    dest ram /tmp<br>    lists_dir ext /var/opkg-lists<br>    option overlay_root /overlay<br>    src/gz r2_base <a href="http://downloads.openwrt.org.cn/PandoraBox/ralink/packages/base" target="_blank" rel="noopener">http://downloads.openwrt.org.cn/PandoraBox/ralink/packages/base</a><br>    src/gz r2_management <a href="http://downloads.openwrt.org.cn/PandoraBox/ralink/packages/management" target="_blank" rel="noopener">http://downloads.openwrt.org.cn/PandoraBox/ralink/packages/management</a><br>    src/gz r2_oldpackages <a href="http://downloads.openwrt.org.cn/PandoraBox/ralink/packages/oldpackages" target="_blank" rel="noopener">http://downloads.openwrt.org.cn/PandoraBox/ralink/packages/oldpackages</a><br>    src/gz r2_packages <a href="http://downloads.openwrt.org.cn/PandoraBox/ralink/packages/packages" target="_blank" rel="noopener">http://downloads.openwrt.org.cn/PandoraBox/ralink/packages/packages</a><br>    src/gz r2_routing <a href="http://downloads.openwrt.org.cn/PandoraBox/ralink/packages/routing" target="_blank" rel="noopener">http://downloads.openwrt.org.cn/PandoraBox/ralink/packages/routing</a><br>    src/gz r2_telephony <a href="http://downloads.openwrt.org.cn/PandoraBox/ralink/packages/telephony" target="_blank" rel="noopener">http://downloads.openwrt.org.cn/PandoraBox/ralink/packages/telephony</a><br>    src/gz r2_oldpackages2 <a href="http://downloads.openwrt.org.cn/PandoraBox/ralink/mt7620_old/packages" target="_blank" rel="noopener">http://downloads.openwrt.org.cn/PandoraBox/ralink/mt7620_old/packages</a><br>    src/gz 16.10_base <a href="http://downloads.pandorabox.com.cn/pandorabox/packages/mt7620/packages/base" target="_blank" rel="noopener">http://downloads.pandorabox.com.cn/pandorabox/packages/mt7620/packages/base</a><br>    src/gz 16.10_luci <a href="http://downloads.pandorabox.com.cn/pandorabox/packages/mt7620/packages/luci" target="_blank" rel="noopener">http://downloads.pandorabox.com.cn/pandorabox/packages/mt7620/packages/luci</a><br>    src/gz 16.10_packages <a href="http://downloads.pandorabox.com.cn/pandorabox/packages/mt7620/packages/packages" target="_blank" rel="noopener">http://downloads.pandorabox.com.cn/pandorabox/packages/mt7620/packages/packages</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>35</title>
+      <link href="/2020/02/35/"/>
+      <url>/2020/02/35/</url>
+      
+        <content type="html"><![CDATA[<hr><p>title: Centos7 install killall<br>date: 2017-08-24 10:14:00<br>updated: %s<br>—<!--markdown-->```bash</p><h1 id="get-package-name"><a href="#get-package-name" class="headerlink" title="get package name"></a>get package name</h1><p>yum search killall</p><h1 id="install-package"><a href="#install-package" class="headerlink" title="install package"></a>install package</h1><p>yum install psmisc<br>```</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>37</title>
+      <link href="/2020/02/37/"/>
+      <url>/2020/02/37/</url>
+      
+        <content type="html"><![CDATA[<hr><p>title: Maven - skipping the tests<br>date: 2017-10-19 20:10:00<br>updated: %s<br>—<!--markdown--># Skipping in Cli</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># true as default value </span></span><br><span class="line">maven &lt;goal&gt; -DskipTests=&lt;<span class="literal">true</span>|<span class="literal">false</span>&gt;</span><br></pre></td></tr></table></figure><h1 id="skipping-in-project"><a href="#skipping-in-project" class="headerlink" title="skipping in project"></a>skipping in project</h1><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">  <span class="tag">&lt;<span class="name">project</span>&gt;</span></span><br><span class="line">  [...]</span><br><span class="line">  <span class="tag">&lt;<span class="name">build</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">plugins</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.maven.plugins<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>maven-surefire-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.12.4<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">skipTests</span>&gt;</span>true<span class="tag">&lt;/<span class="name">skipTests</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">plugins</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">build</span>&gt;</span></span><br><span class="line">  [...]</span><br><span class="line"><span class="tag">&lt;/<span class="name">project</span>&gt;</span></span><br></pre></td></tr></table></figure><h1 id="skipping-by-default"><a href="#skipping-by-default" class="headerlink" title="skipping by default"></a>skipping by default</h1><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">project</span>&gt;</span></span><br><span class="line">  [...]</span><br><span class="line">  <span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">skipTests</span>&gt;</span>true<span class="tag">&lt;/<span class="name">skipTests</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br><span class="line">  [...]</span><br><span class="line">  <span class="tag">&lt;<span class="name">build</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">plugins</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.maven.plugins<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>maven-surefire-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.12.4<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">skipTests</span>&gt;</span>$&#123;skipTests&#125;<span class="tag">&lt;/<span class="name">skipTests</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">plugins</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">build</span>&gt;</span></span><br><span class="line">  [...]</span><br><span class="line"><span class="tag">&lt;/<span class="name">project</span>&gt;</span></span><br></pre></td></tr></table></figure><p><em>1. <a href="http://maven.apache.org/plugins-archives/maven-surefire-plugin-2.12.4/examples/skipping-test.html" target="_blank" rel="noopener">Maven-doc</a></em></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>4</title>
+      <link href="/2020/02/4/"/>
+      <url>/2020/02/4/</url>
+      
+        <content type="html"><![CDATA[<hr><p>title: Nginx 禁止从ip访问<br>date: 2015-11-02 20:10:00<br>updated: %s<br>—<!--markdown--><code>server{     listen 80 default;     server_name _;     return 500;     }</code></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>42</title>
+      <link href="/2020/02/42/"/>
+      <url>/2020/02/42/</url>
+      
+        <content type="html"><![CDATA[<hr><p>title: 编译daemontools报错<br>date: 2017-11-21 11:17:24<br>updated: %s<br>—<!--markdown-->## 说明</p><p>根据<code>zookeeper</code>官方文档，使用<code>daemontools</code>监视<code>zk</code>，编译时遇到报错</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/ld: errno: TLS definition <span class="keyword">in</span> /lib64/libc.so.6 section .tbss mismatches non-TLS reference <span class="keyword">in</span> envdir.o</span><br><span class="line">/lib64/libc.so.6: error adding symbols: Bad value</span><br><span class="line">collect2: error: ld returned 1 <span class="built_in">exit</span> status</span><br><span class="line">make: *** [envdir] Error 1</span><br></pre></td></tr></table></figure><p>#</p><p>则编辑<code>src/conf-cc</code>, 加<code>gcc</code>加上<code>-include /usr/include/errno.h</code>使用标准错误，再行编译</p><h2 id="资料"><a href="#资料" class="headerlink" title="资料"></a>资料</h2><ol><li><a href="http://blog.csdn.net/yangshiqi1089/article/details/6002272" target="_blank" rel="noopener">使用daemontools监控服务</a></li></ol>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>43</title>
+      <link href="/2020/02/43/"/>
+      <url>/2020/02/43/</url>
+      
+        <content type="html"><![CDATA[<hr><p>title: centos下daemontools自启动<br>date: 2017-11-21 13:57:00<br>updated: %s<br>—<!--markdown-->centos7下使用systemd注册服务</p><p>编辑<code>/etc/systemd/system/daemontools.service</code></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">[Unit]</span><br><span class="line">Description&#x3D;daemontools Start supervise</span><br><span class="line">After&#x3D;getty.target</span><br><span class="line"> </span><br><span class="line">[Service]</span><br><span class="line">Type&#x3D;simple</span><br><span class="line">User&#x3D;root</span><br><span class="line">Group&#x3D;root</span><br><span class="line">Restart&#x3D;always</span><br><span class="line">ExecStart&#x3D;&#x2F;command&#x2F;svscanboot &#x2F;dev&#x2F;ttyS0</span><br><span class="line">TimeoutSec&#x3D;0</span><br><span class="line"> </span><br><span class="line">[Install]</span><br><span class="line">WantedBy&#x3D;multi-user.target</span><br></pre></td></tr></table></figure><p><a href="https://www.phpini.com/linux/rhel-centos-7-setup-daemontools-auto-start" target="_blank" rel="noopener">脚本源</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>44</title>
+      <link href="/2020/02/44/"/>
+      <url>/2020/02/44/</url>
+      
+        <content type="html"><![CDATA[<hr><p>title: Daemontools使用笔记<br>date: 2017-11-21 17:41:00<br>updated: %s<br>—<!--markdown--># Daemontools</p><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>Daemontools是一个watchdog工具，用于监听指定进程并保活。</p><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>Daemontools十分小巧，推荐编译安装。</p><p>以下摘自<a href="http://cr.yp.to/daemontools/install.html" target="_blank" rel="noopener">官网</a>：</p><h3 id="生成编译文件夹"><a href="#生成编译文件夹" class="headerlink" title="生成编译文件夹"></a>生成编译文件夹</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /package</span><br><span class="line">chmod 1755 /package</span><br><span class="line"><span class="built_in">cd</span> /package</span><br></pre></td></tr></table></figure><h3 id="下载解压包"><a href="#下载解压包" class="headerlink" title="下载解压包"></a>下载<a href="http://cr.yp.to/daemontools/daemontools-0.76.tar.gz" target="_blank" rel="noopener">解压包</a></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">gunzip daemontools-0.76.tar</span><br><span class="line">tar -xpf daemontools-0.76.tar</span><br><span class="line">rm -f daemontools-0.76.tar</span><br><span class="line"><span class="built_in">cd</span> admin/daemontools-0.76</span><br></pre></td></tr></table></figure><h3 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">package/install</span><br></pre></td></tr></table></figure><h3 id="可能遇到的问题"><a href="#可能遇到的问题" class="headerlink" title="可能遇到的问题"></a>可能遇到的问题</h3><p>见<a href="/archives/42/">另一篇文章</a></p><h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>安装完后，daemontools分为两部分:</p><ul><li><code>/command/</code>: 存储daemontools的可执行文件，安装时连接到<code>/usr/local/bin</code>下；</li><li><code>/service/</code>: 保存Service配置。</li></ul><h3 id="Service"><a href="#Service" class="headerlink" title="Service"></a>Service</h3><p>每个<code>service</code>以文件夹的形式保存。<br>每个文件夹下保存可执行文件<code>run</code>，作为执行的程序。<br><code>run</code>文件推荐赋值权限<code>755</code>。</p><p>权限示例</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[root@greenvm-lkf7700v2 ~]# ls -al &#x2F;service&#x2F;zookeeper&#x2F;</span><br><span class="line">total 324</span><br><span class="line">drwxr-xr-x. 3 root root     52 Nov 21 16:41 .</span><br><span class="line">drwxr-xr-x. 7 root root     88 Nov 21 13:50 ..</span><br><span class="line">-rwxr-xr-x. 1 root root    155 Nov 21 16:41 run</span><br><span class="line">drwx------. 2 root root     53 Nov 21 17:26 supervise</span><br><span class="line">-rw-r--r--. 1 root root 326422 Nov 21 17:24 zookeeper.out</span><br><span class="line">[root@greenvm-lkf7700v2 ~]#</span><br></pre></td></tr></table></figure><p><code>run</code>文件示例</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line">ZK_PATH=/opt/zookeeper-3.4.10</span><br><span class="line"><span class="built_in">source</span> /etc/profile.d/java.sh</span><br><span class="line"><span class="built_in">source</span> /etc/profile.d/zookeeper.sh</span><br><span class="line"><span class="built_in">exec</span> 2&gt;&amp;1</span><br><span class="line"><span class="built_in">exec</span> <span class="variable">$&#123;ZK_PATH&#125;</span>/bin/zkServer.sh start</span><br></pre></td></tr></table></figure><p><em>ps： 注意设置环境变量，除了导入脚本或者写死。也可以参考使用 <a href="http://cr.yp.to/daemontools/envdir.html" target="_blank" rel="noopener">envdir</a>命令)</em></p><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="自启动"><a href="#自启动" class="headerlink" title="自启动"></a>自启动</h3><p><code>centos7</code>下可以调用系统的Systemd服务让<code>svscanboot</code>自行启动。<code>svscanboot</code>将自动调用<code>svscan /service 2&gt;&amp;1 | readproctitle service errors: .....</code>命令，详细说明参见<a href="http://cr.yp.to/daemontools/svscanboot.html" target="_blank" rel="noopener">官网</a>。</p><p>见<a href="/archives/43/">另一篇文章</a></p><p>启动后使用<code>ps aux | grep supervisor</code>命令可观察到监工进程已启动</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">root      33920  0.0  0.0 112660   940 pts&#x2F;0    S+   17:40   0:00 grep --color&#x3D;auto super</span><br><span class="line">root      73503  0.0  0.0   4176   440 ?        S    15:10   0:02 supervise zookeeper</span><br><span class="line">root      73504  0.0  0.0   4176   344 ?        S    15:10   0:00 supervise storm-nimbus</span><br><span class="line">root      73505  0.0  0.0   4176   344 ?        S    15:10   0:00 supervise storm-sup</span><br><span class="line">root      73506  0.0  0.0   4176   348 ?        S    15:10   0:00 supervise storm-ui</span><br><span class="line">root      73507  0.0  0.0   4176   344 ?        S    15:10   0:00 supervise storm-log</span><br></pre></td></tr></table></figure><h3 id="对服务进行操作"><a href="#对服务进行操作" class="headerlink" title="对服务进行操作"></a>对服务进行操作</h3><p>使用<code>svc</code>命令对<code>supervisor</code>进行操作，命令如下:</p><ul><li><code>-u</code>: 启动服务，若已经启动则重启</li><li><code>-d</code>: 关闭服务，不重启 (发送TERM信号)</li><li><code>-o</code>: 仅启动</li><li><code>-k</code>: 发送<code>KILL</code>信号</li></ul><p>完整信息可以参考<a href="http://cr.yp.to/daemontools/svc.html" target="_blank" rel="noopener">官方文档</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>45</title>
+      <link href="/2020/02/45/"/>
+      <url>/2020/02/45/</url>
+      
+        <content type="html"><![CDATA[<hr><p>title: CentOS7 Yum修复<br>date: 2017-11-21 17:58:00<br>updated: %s<br>—<!--markdown-->## 前言</p><p>测试机，系统小版本升级，yum更新包前自检报错。由于未记录详细信息，简单回忆一下</p><h2 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h2><p><code>yum update</code>遇到如下问题</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">File &quot;&#x2F;usr&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;yum&#x2F;fssnapshots.py&quot;, line 55, in _list_vg_names</span><br><span class="line">lvm.LibLVMError: (-1, &#39;Request to list VGs in lvmetad gave response Connection reset by peer.&#39;) yum</span><br></pre></td></tr></table></figure><p>谷歌之后无解。</p><p>无奈观察报错信息，发现<code>lvm</code>和<code>python</code>有嫌疑。<br>、<br>随即<code>yum check</code>检查依赖，发现<code>lvm2-lib</code>包依赖缺失。</p><p>于是<code>yum update lvm2-lib</code>更新相关包。结果依然报错，观察报错信息，发现和lvm2的python包依赖冲突。</p><p>于是手动卸载冲突包，重新<code>yum update</code>解决。</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>11</title>
+      <link href="/2020/02/11/"/>
+      <url>/2020/02/11/</url>
+      
+        <content type="html"><![CDATA[<hr><p>title: Mysql WorkBench快捷键修改<br>date: 2015-12-29 17:05:00<br>updated: %s<br>—<!--markdown-->程序目录根目录下’/data/main_menu.xml’中<br>查找<code>Auto-complete</code>并修改<code>value</code>节点中属性<code>key</code>为<code>shortcut</code>中的值</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;value type&#x3D;&quot;object&quot; struct-name&#x3D;&quot;app.MenuItem&quot; id&#x3D;&quot;com.mysql.wb.menu.edit.list-members&quot;&gt;</span><br><span class="line">    &lt;link type&#x3D;&quot;object&quot; key&#x3D;&quot;owner&quot; struct-name&#x3D;&quot;app.MenuItem&quot;&gt;com.mysql.wb.menu.edit&lt;&#x2F;link&gt;</span><br><span class="line">    &lt;value type&#x3D;&quot;string&quot; key&#x3D;&quot;caption&quot;&gt;Auto-complete&lt;&#x2F;value&gt;</span><br><span class="line">    &lt;value type&#x3D;&quot;string&quot; key&#x3D;&quot;name&quot;&gt;list-members&lt;&#x2F;value&gt;</span><br><span class="line">    &lt;value type&#x3D;&quot;string&quot; key&#x3D;&quot;command&quot;&gt;builtin:list-members&lt;&#x2F;value&gt;</span><br><span class="line">    &lt;value type&#x3D;&quot;string&quot; key&#x3D;&quot;itemType&quot;&gt;action&lt;&#x2F;value&gt;</span><br><span class="line">    &lt;value type&#x3D;&quot;string&quot; key&#x3D;&quot;shortcut&quot;&gt;Modifier+J&lt;&#x2F;value&gt;</span><br><span class="line">    &lt;value type&#x3D;&quot;string&quot; key&#x3D;&quot;platform&quot;&gt;windows,linux&lt;&#x2F;value&gt;</span><br><span class="line">    &lt;value type&#x3D;&quot;string&quot; key&#x3D;&quot;context&quot;&gt;*query&lt;&#x2F;value&gt;</span><br><span class="line">&lt;&#x2F;value&gt;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>47</title>
+      <link href="/2020/02/47/"/>
+      <url>/2020/02/47/</url>
+      
+        <content type="html"><![CDATA[<hr><p>title: getopts from man<br>date: 2017-11-27 14:49:55<br>updated: %s<br>—<!--markdown-->## command</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">getopts</span> [optstring] [var name] [args]</span><br></pre></td></tr></table></figure><h2 id="instuction"><a href="#instuction" class="headerlink" title="instuction"></a>instuction</h2><p><code>getopts</code>被用于shell外壳程序解析位置参数。 [optstring]中包含需被识别出的选项；如果一个字符后加了冒号，表示该选项需要有一个用空格分隔的参数。</p><p><code>:</code>和<code>?</code>不推荐用于选项名称。</p><p>每次<code>getopts</code>被执行的时候，<code>getopts</code>被告知一个shell参数[var name]。 如果[var name]不存在,则会初始化它，并且下一个参数的序号将被赋予<code>OPTIND</code>中处理。 当Shell或Shell脚本被<br>执行时，<code>OPTIND</code>被自动初始化为1； 在同一个shell多次调用<code>getopts</code>时，如果需要使用不同的参数，那么需要手动重置<code>OPTIND</code>。</p><p>当处理完选项时，<code>getopts</code>会退出，并返回一个大于0的值。<code>OPTIND</code>将被设置为第一个非选项的参数， 而<code>name</code>被设置为<code>?</code></p><p><code>getopts</code>一般解析位置参数，但如果<code>args</code>中提供了更多的参数，那么<code>getopts</code>则会去解析<code>args</code></p><p><code>getopts</code>有两种方式报错。如果<code>optstring</code>的第一个字符是一个冒号, 那么将会采用静默报错。 普通操作模式时，诊断消息仅在遇到非法或缺少选项时，才会被打印。如果<code>OPTERR</code>被设置<br>为<code>0</code>，即使<code>optstring</code>的首字符为<code>:</code>，也不会显示任何报错信息。</p><p>当发现一个非法选项时，<code>getopts</code>将<code>?</code>赋值到[var name]中且在非静默时， 打印一条错误信息并释放<code>OPTARG</code>变量。如果<code>getopts</code>不是静默的，那么该选项字符会被赋值给<code>OPTARG</code>并不会<br>打印任何诊断消息。</p><p>如果没有发现需要的参数，且<code>getopts</code>是非静默的，那么[var name]会被赋值<code>?</code>，<code>OPTARG</code>会被unset删除，并打印一条诊断消息。如果<code>getopts</code>不是静默的，那么<code>:</code>会被赋予[var name]<br>，<code>OPTARG</code>被设置为该选项。</p><p><code>getopts</code>当找一个选吸时，无论该选项是否指定，都会返回<code>true</code>。若解析完选项或遇到错误时，返回false。</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>48</title>
+      <link href="/2020/02/48/"/>
+      <url>/2020/02/48/</url>
+      
+        <content type="html"><![CDATA[<hr><p>title: 小文件导致inode耗尽<br>date: 2017-12-04 10:31:00<br>updated: %s<br>—<!--markdown-->## 现象</p><p>早上发现测试程序因为硬盘空间不够无法生成日志，一直重启。</p><h2 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h2><p><code>df -h</code>之后发现硬盘还有50%可用空间，于是<code>df -ih</code>发现文件数被撑炸。</p><h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>部署<code>nexus</code>导致硬盘文件数被撑爆。反思以后应注意:</p><ol><li><code>nexus</code>应启用<code>task</code>定期清理</li><li><code>LOG</code>策略需要按需设置</li><li><code>sonatype</code>文件夹所在硬盘，格式化时应提供更小的文件块</li><li>采用<code>LVM</code>动态扩展</li></ol>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>49</title>
+      <link href="/2020/02/49/"/>
+      <url>/2020/02/49/</url>
+      
+        <content type="html"><![CDATA[<hr><p>title: VS Code Settings<br>date: 2017-12-22 14:00:54<br>updated: %s<br>—<!--markdown--><code>// 将键绑定放入此文件中以覆盖默认值[    {        &quot;key&quot;: &quot;alt+oem_2&quot;,        &quot;command&quot;: &quot;editor.action.triggerSuggest&quot;,        &quot;when&quot;: &quot;editorHasCompletionItemProvider &amp;&amp; editorTextFocus &amp;&amp; !editorReadonly&quot;    },    {        &quot;key&quot;: &quot;ctrl+space&quot;,        &quot;command&quot;: &quot;-editor.action.triggerSuggest&quot;,        &quot;when&quot;: &quot;editorHasCompletionItemProvider &amp;&amp; editorTextFocus &amp;&amp; !editorReadonly&quot;    },    {        &quot;key&quot;: &quot;ctrl+alt+l&quot;,        &quot;command&quot;: &quot;editor.action.formatDocument&quot;,        &quot;when&quot;: &quot;editorTextFocus &amp;&amp; !editorReadonly&quot;    },    {        &quot;key&quot;: &quot;shift+alt+f&quot;,        &quot;command&quot;: &quot;-editor.action.formatDocument&quot;,        &quot;when&quot;: &quot;editorTextFocus &amp;&amp; !editorReadonly&quot;    },    {        &quot;key&quot;: &quot;ctrl+y&quot;,        &quot;command&quot;: &quot;editor.action.deleteLines&quot;,        &quot;when&quot;: &quot;editorTextFocus &amp;&amp; !editorReadonly&quot;    },    {        &quot;key&quot;: &quot;ctrl+shift+k&quot;,        &quot;command&quot;: &quot;-editor.action.deleteLines&quot;,        &quot;when&quot;: &quot;editorTextFocus &amp;&amp; !editorReadonly&quot;    }]</code></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>50</title>
+      <link href="/2020/02/50/"/>
+      <url>/2020/02/50/</url>
+      
+        <content type="html"><![CDATA[<hr><p>title: Example pom file for maven project with docker<br>date: 2018-01-09 10:50:22<br>updated: %s<br>—<!--markdown-->```xml<br><profiles><br>    <profile><br>        <id>docker</id><br>        <build><br>            <plugins><br>                <plugin><br>                    <groupId>io.fabric8</groupId><br>                    <artifactId>docker-maven-plugin</artifactId><br>                    <version>0.22.1</version><br>                    <configuration><br>                        <images><br>                            <image><br>                                <name>hello-java</name><br>                                <build><br>                                    <from>openjdk:latest</from><br>                                    <assembly><br>                                        <descriptorRef>artifact</descriptorRef><br>                                    </assembly><br>                                    <cmd>java -cp maven/${project.name}-${project.version}.jar org.examples.java.App</cmd><br>                                </build><br>                                <run><br>                                    <wait><br>                                        <log>Hello World!</log><br>                                    </wait><br>                                </run><br>                            </image><br>                        </images><br>                    </configuration><br>                    <executions><br>                        <execution><br>                            <id>docker:build</id><br>                            <phase>package</phase><br>                            <goals><br>                                <goal>build</goal><br>                            </goals><br>                        </execution><br>                        <execution><br>                            <id>docker:start</id><br>                            <phase>install</phase><br>                            <goals><br>                                <goal>start</goal><br>                                <goal>logs</goal><br>                            </goals><br>                        </execution><br>                    </executions><br>                </plugin><br>            </plugins><br>        </build><br>    </profile><br></profiles></p><p>```</p><p>ps:</p><ol><li><a href="https://github.com/docker/labs/blob/master/developer-tools/java/chapters/ch03-build-image.adoc" target="_blank" rel="noopener">Docker tours</a></li></ol>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>51</title>
+      <link href="/2020/02/51/"/>
+      <url>/2020/02/51/</url>
+      
+        <content type="html"><![CDATA[<hr><p>title: shell下生成随机字符串<br>date: 2018-01-16 14:40:00<br>updated: %s<br>—<!--markdown--><code>bashdd if=/dev/random bs=1M count=1 | md5sum -</code></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>52</title>
+      <link href="/2020/02/52/"/>
+      <url>/2020/02/52/</url>
+      
+        <content type="html"><![CDATA[<hr><p>title: jvm导入ca证书<br>date: 2018-01-30 15:14:00<br>updated: %s<br>—<!--markdown-->```bash<br> <JAVA_HOME>/keytool -import -noprompt -trustcacerts -alias <alias> -file <path-to-cert> -keystore /usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/security/cacerts</p><pre><code></code></pre>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>53</title>
+      <link href="/2020/02/53/"/>
+      <url>/2020/02/53/</url>
+      
+        <content type="html"><![CDATA[<hr><p>title: docker使用root权限登录shell<br>date: 2018-01-30 15:16:28<br>updated: %s<br>—<!--markdown-->```bash<br>docker exec -it -u <root uid> <container_name> <command></p><p>```<br>ps:<br>uid多为0，kernel中hard_code</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>54</title>
+      <link href="/2020/02/54/"/>
+      <url>/2020/02/54/</url>
+      
+        <content type="html"><![CDATA[<hr><p>title: Android 8.x sercure wifi fix for chinese user<br>date: 2018-02-21 13:47:00<br>updated: %s<br>—<!--markdown-->1. change validate url</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adb shell settings put global captive_portal_https_url https://captive.v2ex.co/generate_204</span><br></pre></td></tr></table></figure><ol start="2"><li>turn on then turn off airplane mode</li></ol>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>55</title>
+      <link href="/2020/02/55/"/>
+      <url>/2020/02/55/</url>
+      
+        <content type="html"><![CDATA[<hr><p>title: pair bt keyborad in linux<br>date: 2018-02-21 13:55:00<br>updated: %s<br>—<!--markdown-->```bash<br>bluetoothctl</p><h1 id="no-pin-info-without-register-agent"><a href="#no-pin-info-without-register-agent" class="headerlink" title="no pin info without register agent"></a>no pin info without register agent</h1><p>agent on<br>default-agent<br>scan on<br>pair [MAC]</p><h1 id="terminal-output-agent-PIN-code-xxxxxx"><a href="#terminal-output-agent-PIN-code-xxxxxx" class="headerlink" title="terminal output [agent] PIN code: xxxxxx"></a>terminal output [agent] PIN code: xxxxxx</h1><p>exit<br>```</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>57</title>
+      <link href="/2020/02/57/"/>
+      <url>/2020/02/57/</url>
+      
+        <content type="html"><![CDATA[<hr><p>title: ubuntu16.04下编译安装corebird<br>date: 2018-02-22 21:05:36<br>updated: %s<br>—<!--markdown-->## 安装说明</p><ol><li><p>由于<code>Elementary OS loki</code>基于<code>Ubuntu 16.04</code>开发, 其gtk3.0包版本过旧(1.6版本需要3.20以上), 因此编译1.5.1版本</p></li><li><p>获取源码</p></li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/baedert/corebird.git</span><br><span class="line">git fetch</span><br><span class="line">git checkout 1.5.1</span><br></pre></td></tr></table></figure><ol start="3"><li>运行<code>autoconfig.sh</code></li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> sudo ./autogen.sh \</span><br><span class="line">--prefix=/usr \     </span><br><span class="line">--<span class="built_in">disable</span>-spellcheck</span><br></pre></td></tr></table></figure><p>ps: 由于缺少<code>libgspell-1-dev</code>包(所以gtk3.18是真的坑), 因此关闭拼写校验功能</p><ol start="4"><li>编译安装</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo make</span><br><span class="line">sudo make install</span><br></pre></td></tr></table></figure><p>ps:<br>编译过程中遇到<code>/src/widgets/BadgeRadioButton.c:106: undefined reference to gtk_widget_set_focus_on_click</code><br>参考<a href="https://github.com/baedert/corebird/issues/531" target="_blank" rel="noopener">issue#531</a>解决, 原因是valac翻译器支持的gtk头文件版本比本地库版本高造成的</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>58</title>
+      <link href="/2020/02/58/"/>
+      <url>/2020/02/58/</url>
+      
+        <content type="html"><![CDATA[<hr><p>title: selinux打开samba权限<br>date: 2018-03-05 15:56:00<br>updated: %s<br>—<!--markdown-->## 配置SELINUX</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chcon -t samba_share_t [path/to/share]</span><br></pre></td></tr></table></figure><p>##　配置iptables</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">iptables -I INPUT 3 -m state --state NEW -m tcp -p tcp --dport 139 -j ACCEPT &amp;&amp; \</span><br><span class="line">iptables -I INPUT 4 -m state --state NEW -m udp -p udp --dport 139 -j ACCEPT &amp;&amp; \</span><br><span class="line">iptables -I INPUT 5 -m state --state NEW -m tcp -p tcp --dport 445 -j ACCEPT &amp;&amp; \</span><br><span class="line">iptables -I INPUT 6 -m state --state NEW -m udp -p udp --dport 445 -j ACCEPT</span><br></pre></td></tr></table></figure><p>PS: 注意修改插入位置</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>6</title>
+      <link href="/2020/02/6/"/>
+      <url>/2020/02/6/</url>
+      
+        <content type="html"><![CDATA[<hr><p>title: Post<br>date: 2015-11-03 13:02:00<br>updated: %s<br>—<!--markdown-->#header</p><h2 id="application-x-www-formreloaded"><a href="#application-x-www-formreloaded" class="headerlink" title="application/x-www-formreloaded"></a>application/x-www-formreloaded</h2><h2 id="application-json"><a href="#application-json" class="headerlink" title="application/json"></a>application/json</h2><h2 id="application"><a href="#application" class="headerlink" title="application/"></a>application/</h2>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>60</title>
+      <link href="/2020/02/60/"/>
+      <url>/2020/02/60/</url>
+      
+        <content type="html"><![CDATA[<hr><p>title: windows下git报错 文件名超长<br>date: 2018-03-07 21:46:00<br>updated: %s<br>—<!--markdown-->调用windows旧api导致(<a href="https://www.hongweipeng.com/index.php/archives/416/" target="_blank" rel="noopener">据说</a>)</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global core.longpaths <span class="literal">true</span></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>61</title>
+      <link href="/2020/02/61/"/>
+      <url>/2020/02/61/</url>
+      
+        <content type="html"><![CDATA[<hr><p>title: SQL Test Case<br>date: 2018-05-14 16:19:14<br>updated: %s<br>—<!--markdown-->SQL Test Case<br>=============</p><p><a href="http://dev.mysql.com/doc/index-other.html" target="_blank" rel="noopener">http://dev.mysql.com/doc/index-other.html</a></p><p>Just scroll down to Example Databases and you will find it.</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>62</title>
+      <link href="/2020/02/62/"/>
+      <url>/2020/02/62/</url>
+      
+        <content type="html"><![CDATA[<hr><p>title: HTTP Protocol<br>date: 2018-08-28 11:21:00<br>updated: %s<br>—<!--markdown-->## message format</p><h3 id="Request-Message"><a href="#Request-Message" class="headerlink" title="Request Message"></a>Request Message</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">-1- REQUEST: [Method]&lt;space&gt;[URL]&lt;space&gt;[Protocol Version]&lt;space&gt;&lt;\r\n&gt;</span><br><span class="line">-2- HEAD   : [FIELD]:[VALUE]&lt;\r\n&gt;</span><br><span class="line">...</span><br><span class="line">-3- SPLITE : &lt;\r\n&gt;</span><br><span class="line">-4- DATA   :</span><br><span class="line">...</span><br></pre></td></tr></table></figure><h3 id="Response-Message"><a href="#Response-Message" class="headerlink" title="Response Message"></a>Response Message</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">-1- REQUEST: [Protocol Version]&lt;space&gt;[STATUS CODE]&lt;space&gt;[STATUS MESSAGE]&lt;space&gt;&lt;\r\n&gt;</span><br><span class="line">-2- HEAD   : [FIELD]:[VALUE]&lt;\r\n&gt;</span><br><span class="line">...</span><br><span class="line">-3- SPLITE : &lt;\r\n&gt;</span><br><span class="line">-4- DATA   :</span><br><span class="line">...</span><br></pre></td></tr></table></figure><h2 id="Status-Codes"><a href="#Status-Codes" class="headerlink" title="Status Codes"></a>Status Codes</h2><p>1xx：Informational<br>2xx：Success<br>3xx：Redirection<br>4xx：Client Error<br>5xx：Server Error</p><p><a href="https://www.restapitutorial.com/httpstatuscodes.html" target="_blank" rel="noopener">HTTP Status Codes</a></p><h2 id="HTTP-Methods"><a href="#HTTP-Methods" class="headerlink" title="HTTP Methods"></a>HTTP Methods</h2><ul><li>GET</li><li>POST</li><li>HEAD</li><li>PUT</li><li>DELETE</li><li>CONNECT</li><li>OPTIONS</li><li>TRANCE</li></ul>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>10</title>
+      <link href="/2020/02/10/"/>
+      <url>/2020/02/10/</url>
+      
+        <content type="html"><![CDATA[<hr><p>title: java调用wsdl备忘<br>date: 2015-12-07 10:18:00<br>updated: %s<br>—<!--markdown--># 情景<br>最近一个项目时间比较紧，场景如下：<br>接口对象使用C#，使用wsdl文件作为接口说明文件</p><h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h1><p>于是就采用了一个比较偷懒的方法,使用<a href="http://cxf.apache.org/download.html" target="_blank" rel="noopener">wsdl工具</a></p><p>配置完<code>PATH</code>后(类似于tomcat)使用命令行调用wsdl2java.bat即可</p><h2 id="2016-2-18新增"><a href="#2016-2-18新增" class="headerlink" title="2016-2-18新增"></a>2016-2-18新增</h2><p>调用方法时遇到<code>Unsupported endpoint address</code>报错时应将对应<code>port</code>的address使用<code>BindingProvider</code>进行绑定</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">BindingProvider bindingProvider = (BindingProvider) port;</span><br><span class="line">bindingProvider.getRequestContext().put(BindingProvider.ENDPOINT_ADDRESS_PROPERTY,SERVICE_ENDPOINT_ADDRESS);</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>12</title>
+      <link href="/2020/02/12/"/>
+      <url>/2020/02/12/</url>
+      
+        <content type="html"><![CDATA[<hr><p>title: ajax备忘<br>date: 2016-01-18 14:28:00<br>updated: %s<br>—<!--markdown-->不调用jquery</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">find</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">var</span> drugType = <span class="built_in">document</span>.getElementById(<span class="string">"type"</span>).value;</span><br><span class="line">    <span class="keyword">var</span> nhiCode = <span class="built_in">document</span>.getElementById(<span class="string">"code"</span>).value;</span><br><span class="line">    <span class="keyword">if</span> (nhiCode.length&gt;<span class="number">0</span>)&#123;</span><br><span class="line"><span class="keyword">var</span> xmlhttp;</span><br><span class="line"><span class="keyword">if</span> (<span class="built_in">window</span>.XMLHttpRequest)</span><br><span class="line">&#123;<span class="comment">// code for IE7+, Firefox, Chrome, Opera, Safari</span></span><br><span class="line">xmlhttp=<span class="keyword">new</span> XMLHttpRequest();</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">&#123;<span class="comment">// code for IE6, IE5</span></span><br><span class="line">xmlhttp=<span class="keyword">new</span> ActiveXObject(<span class="string">"Microsoft.XMLHTTP"</span>);</span><br><span class="line">&#125;</span><br><span class="line">xmlhttp.onreadystatechange=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">        <span class="comment">//连接状态改变时</span></span><br><span class="line">    <span class="keyword">if</span> (xmlhttp.readyState==<span class="number">4</span> &amp;&amp; xmlhttp.status==<span class="number">200</span>)</span><br><span class="line">    &#123;</span><br><span class="line">PanelDisappear(<span class="string">"message-box"</span>);</span><br><span class="line"><span class="keyword">var</span> messageJSON = <span class="built_in">JSON</span>.parse(xmlhttp.responseText);</span><br><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">"result"</span>).innerHTML= messageJSON.message;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (xmlhttp.status==<span class="number">404</span>)&#123;/</span><br><span class="line">PanelDisappear(<span class="string">"message-box"</span>);</span><br><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">"result"</span>).innerHTML= <span class="string">"连接异常"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//DOING SOMETHING</span></span><br><span class="line">xmlhttp.open(<span class="string">"POST"</span>,url,<span class="literal">true</span>);</span><br><span class="line">xmlhttp.setRequestHeader(<span class="string">"Content-type"</span>,<span class="string">"application/x-www-form-urlencoded"</span>);</span><br><span class="line">xmlhttp.send(<span class="string">"drugType="</span>+drugType+<span class="string">"&amp;nhiCode="</span>+nhiCode);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>13</title>
+      <link href="/2020/02/13/"/>
+      <url>/2020/02/13/</url>
+      
+        <content type="html"><![CDATA[<hr><p>title: python笔记-基本类型和容器<br>date: 2016-02-05 16:40:00<br>updated: %s<br>—<!--markdown--><!-- index-menu --></p><h1 id="基本型"><a href="#基本型" class="headerlink" title="基本型"></a>基本型</h1><h2 id="数值型"><a href="#数值型" class="headerlink" title="数值型"></a>数值型</h2><p><code>int</code> <code>float</code>类似于<code>C</code><br><code>/</code>表示除法，结果为<code>float</code><br><code>//</code>表示整除，结果为<code>int</code></p><h2 id="字符串-string"><a href="#字符串-string" class="headerlink" title="字符串 string"></a>字符串 string</h2><p><code>ord()</code>返回对应utf-8编码<br><code>chr()</code>显示编码对应的字符<br><code>len()</code>字符串长度<br><code>b&#39;</code><em><code>str</code></em><code>&#39;</code>转换为bytes <strong>传输或保存为文件时</strong><br><code>encode()</code>转换为指定编码 </p><h2 id="布尔型"><a href="#布尔型" class="headerlink" title="布尔型"></a>布尔型</h2><p><code>True</code>与<code>False</code>注意大小写</p><h1 id="容器"><a href="#容器" class="headerlink" title="容器"></a>容器</h1><h2 id="列表-list"><a href="#列表-list" class="headerlink" title="列表 list"></a>列表 list</h2><p>用<code>[]</code>声明列表<code>,</code>分隔元素<br><strong>-1</strong>索引对应最后一个元素   <strong>负数索引为获取倒数元素</strong><br><code>append()</code>添加元素至末尾<br><code>insert()</code>插入元素至指定序号<br><code>pop()</code>删除末尾元素<br><code>pop(i)</code>删除指定序号的元素<br>list支持泛型</p><h2 id="元组-tuple"><a href="#元组-tuple" class="headerlink" title="元组 tuple"></a>元组 tuple</h2><p>类似于常量，定义后不可变<br>用<code>()</code>声明</p><p><strong>当时定义tuple成员为list时，则可修改list内的成员</strong></p><h2 id="字典-dict"><a href="#字典-dict" class="headerlink" title="字典 dict"></a>字典 dict</h2><p>用<code>{}</code>声明字典</p><p><code>d = {&#39;key1&#39;:value1,&#39;key2&#39;:value2}</code> 或 <code>d.setdefault(&#39;key&#39;,value)</code>或<code>d[&#39;key&#39;] = value</code>添加元素<br><code>pop()</code>删除成员<br><code>clear()</code>清除所有成员<br><code>get(key,value)</code>显示key对应的值，如key值不存在，则返回value *若不设置value，则返回<code>None</code></p><h2 id="集合-set"><a href="#集合-set" class="headerlink" title="集合 set"></a>集合 set</h2><p>声明 <code>set()</code></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>16</title>
+      <link href="/2020/02/16/"/>
+      <url>/2020/02/16/</url>
+      
+        <content type="html"><![CDATA[<hr><p>title: MySQL中的varchar<br>date: 2016-03-02 14:56:00<br>updated: %s<br>—<!--markdown--># varchar<br>mysql中的<code>varchar</code>类似于Orcale中的<code>nvarchar</code>，用于记录字符数目，而不是字节数量</p><p><code>varchar(n)</code>表示可以存储n个字符，无关编码，但是<code>n</code>的最大值和编码有关<br>各种类型字段存储大小，其中<code>vchar</code>和<code>BLOB</code>以及<code>TEXT</code>相同</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">TINYBLOB, TINYTEXT       L + 1 bytes, where L &lt; 2^8    (255 Bytes)</span><br><span class="line">BLOB, TEXT               L + 2 bytes, where L &lt; 2^16   (64 Kilobytes)</span><br><span class="line">MEDIUMBLOB, MEDIUMTEXT   L + 3 bytes, where L &lt; 2^24   (16 Megabytes)</span><br><span class="line">LONGBLOB, LONGTEXT       L + 4 bytes, where L &lt; 2^32   (4 Gigabytes)</span><br></pre></td></tr></table></figure><p>同时满足一下规则:</p><ol><li>MySQL对于变长类型的字段会有1-2个字节来保存字符长度。</li><li>当字符数小于等于255时，MySQL只用1个字节来记录，因为2的8次方减1只能存到255。</li><li>当字符数多余255时，就得用2个字节来存长度了。</li></ol><h2 id="参考"><a href="#参考" class="headerlink" title="参考:"></a><em>参考:</em></h2><p><em>1.<a href="https://ruby-china.org/topics/24920" target="_blank" rel="noopener">MySQL 数据库 varchar 到底可以存多少个汉字，多少个英文呢?我们来搞搞清楚</a></em></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>18</title>
+      <link href="/2020/02/18/"/>
+      <url>/2020/02/18/</url>
+      
+        <content type="html"><![CDATA[<hr><p>title: openwrt下挂载u disk<br>date: 2016-03-27 20:12:00<br>updated: %s<br>—<!--markdown--><!-- index-menu --></p><h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">opkg install kmod-usb-storage block-mount kmod-fs-ext4 block-hotplug</span><br></pre></td></tr></table></figure><p><code>kmod-usb-storage</code>用于kernel支援usb大容量存储设备<br><code>block-mount</code>用于使用fstab挂载以及热挂载<br><code>kmod-fs-ext</code>用于kernel支援ext4格式的文件系统<br><code>block-hotplug</code>用于支援热挂载<br>根据需要安装<code>ntfs-3g</code> <code>kmod-fs-vfat</code> <code>e2fsprogs</code></p><p>安装后若<code>/dev</code>目录下没有找到对应设备,请reboot</p><h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><p>这里使用的u盘已经分区完毕。如果有分区需求，可以使用fdisk工具。</p><h2 id="挂载"><a href="#挂载" class="headerlink" title="挂载"></a>挂载</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkfs.ext4 /dev/sda1   #把sda1转换成ext4格式</span><br><span class="line">mkdir -p /mnt/usb     #新建目录用于挂载</span><br><span class="line">mount -t ext4 /dev/sda1 /mnt/usb -o rw,sync    #挂载sda1到/mnt/usb</span><br></pre></td></tr></table></figure><h2 id="创建swap-可跳过"><a href="#创建swap-可跳过" class="headerlink" title="创建swap,可跳过"></a>创建swap,可跳过</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">dd if&#x3D;&#x2F;dev&#x2F;zero of&#x3D;&#x2F;mnt&#x2F;usb&#x2F;swapfile bs&#x3D;1024 count&#x3D;62142 #创建64M文件</span><br><span class="line">mkswap &#x2F;mnt&#x2F;usb&#x2F;swapfile    #将该文件作为swap</span><br><span class="line">swapon &#x2F;mnt&#x2F;usb&#x2F;swapfile    #启用该swap空间</span><br><span class="line">swapoff &#x2F;mnt&#x2F;usb&#x2F;swapfile   #关闭该swap空间</span><br></pre></td></tr></table></figure><h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol><li><a href="https://wiki.openwrt.org/zh-cn/doc/howto/usb.storage" target="_blank" rel="noopener" title="USB存储">openwrt WIKI</a></li><li><a href="http://blog.sina.com.cn/s/blog_6838386a0101d72s.html" target="_blank" rel="noopener" title="openwrt 自动挂载U盘、移动硬盘">openwrt 自动挂载U盘、移动硬盘</a></li></ol><!-- URL -->]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>19</title>
+      <link href="/2020/02/19/"/>
+      <url>/2020/02/19/</url>
+      
+        <content type="html"><![CDATA[<hr><p>title: JS学习笔记——基础语法<br>date: 2016-05-17 15:49:00<br>updated: %s<br>—<!--markdown--><!-- index-menu --></p><h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><ol><li>浮点数可用科学记数法</li><li>创建数组<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> chars = <span class="keyword">new</span> <span class="built_in">Array</span>();</span><br><span class="line"><span class="keyword">var</span> chars = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="string">"a"</span>,<span class="string">"b"</span>,<span class="string">"c"</span>);</span><br><span class="line"><span class="keyword">var</span> chars = [<span class="string">"a"</span>,<span class="string">"b"</span>,<span class="string">"c"</span>];</span><br></pre></td></tr></table></figure></li><li>字符串与数字相加<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num = <span class="number">5</span> + <span class="string">"5"</span>;</span><br></pre></td></tr></table></figure>输出为<code>num</code>值为55</li><li><code>===</code>表示全等，即类型与值都相等</li></ol><h2 id="控制语句"><a href="#控制语句" class="headerlink" title="控制语句"></a>控制语句</h2><ol><li><code>label</code>可用于标记语句 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">people = [<span class="string">"wang"</span>,<span class="string">"zhang"</span>,<span class="string">"li"</span>];</span><br><span class="line">loop:</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;people.length;++i)&#123;</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">var</span> j=<span class="number">0</span>;j&lt;people[i].length;++j)</span><br><span class="line">    <span class="keyword">if</span>(people[i][j] == <span class="string">"h"</span>)</span><br><span class="line">      <span class="keyword">break</span> loop;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">      alert(people[i][j]);</span><br><span class="line">  alert(i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li><code>throw</code>语句创建自定义错误。 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">    <span class="keyword">if</span>(obj == <span class="literal">null</span> ) <span class="keyword">throw</span> <span class="string">"Object is empty"</span>;</span><br><span class="line">    <span class="keyword">if</span>(obj == <span class="literal">undefined</span> ) <span class="keyword">throw</span> <span class="string">"Object is undefined"</span>;</span><br><span class="line">&#125; <span class="keyword">catch</span> (err)&#123;</span><br><span class="line">    <span class="keyword">var</span> msg = <span class="built_in">document</span>.getElementById(<span class="string">"msg"</span>);</span><br><span class="line">    msg.innerHtml = <span class="string">"Error : "</span> + err.message + <span class="string">"."</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li>不推荐使用<code>with</code>，容易产生歧义以及潜在的bug</li></ol>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>20</title>
+      <link href="/2020/02/20/"/>
+      <url>/2020/02/20/</url>
+      
+        <content type="html"><![CDATA[<hr><p>title: JS学习笔记——DOM<br>date: 2016-05-18 16:30:00<br>updated: %s<br>—<!--markdown-->## HTML</p><ol><li>当页面加载完成之后要慎用<code>document.write()</code>，该方法会覆盖加载完成document <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params"></span>)</span>&#123;   <span class="built_in">document</span>.write(<span class="built_in">Date</span>());&#125;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span> <span class="attr">onclick</span>=<span class="string">"f()"</span>&gt;</span>测试链接<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>如果需要实时修改内容，请修改对应元素的<code>innerHTML</code>属性</li><li>若需要修改样式则修改<code>sytle</code>属性 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">"id"</span>).style.&lt;property&gt;=<span class="xml"><span class="tag">&lt;<span class="name">style</span> <span class="attr">value</span>&gt;</span>;</span></span><br></pre></td></tr></table></figure></li><li>创建新的元素，并插入DOM树<br> <code>createElement</code>创建元素<br> <code>createTextNode</code>创建节点<br> <code>element.appendChild()</code>插入孩子</li><li>删除已有节点 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">parent.removeChild(child);</span><br></pre></td></tr></table></figure> 从<code>parent</code>节点中删除<code>child</code>节点</li></ol>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>21</title>
+      <link href="/2020/02/21/"/>
+      <url>/2020/02/21/</url>
+      
+        <content type="html"><![CDATA[<hr><p>title: JS学习笔记——对象<br>date: 2016-05-18 17:34:00<br>updated: %s<br>—<!--markdown--><!-- index menu --></p><h2 id="新建对象"><a href="#新建对象" class="headerlink" title="新建对象"></a>新建对象</h2><ol><li>直接创建实例 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//实例化后添加属性</span></span><br><span class="line">car=<span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line">car.type=<span class="string">"limousine"</span>;</span><br><span class="line">car.brand=<span class="string">"BMW"</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//使用对象literals</span></span><br><span class="line">car=[type:<span class="string">"limousine"</span>,<span class="attr">brand</span>:<span class="string">"BMW"</span>];</span><br></pre></td></tr></table></figure></li><li>使用构造器 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Car</span>(<span class="params">type,brand</span>)</span>&#123;</span><br><span class="line">    <span class="comment">//对象属性</span></span><br><span class="line">    <span class="keyword">this</span>.type=type;</span><br><span class="line">    <span class="keyword">this</span>.brand=brand;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//对象方法</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">setType</span>(<span class="params">type</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.type=type;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//实例化对象</span></span><br><span class="line"><span class="keyword">var</span> newCar=<span class="keyword">new</span> Car(<span class="string">"PJ"</span>,<span class="string">"BMW"</span>);</span><br></pre></td></tr></table></figure></li><li><code>for ... in ...</code>可遍历对象中的属性 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> person=&#123;<span class="attr">fname</span>:<span class="string">"Bill"</span>,<span class="attr">lname</span>:<span class="string">"Gates"</span>,<span class="attr">age</span>:<span class="number">56</span>&#125;;</span><br><span class="line"><span class="keyword">for</span> (x <span class="keyword">in</span> person)&#123;</span><br><span class="line">    txt=txt + person[x];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> <em>该段代码引用自<a href="http://www.w3school.com.cn/js/js_objects.asp" target="_blank" rel="noopener" title="w3school.com.cn">w3school.com.cn</a></em></li></ol><h2 id="Number对象"><a href="#Number对象" class="headerlink" title="Number对象"></a>Number对象</h2><ol><li>数字均为<strong>64</strong>位浮点数</li><li>数字<code>0</code>起头表示八进制，数字<code>0x</code>起头表示十六进制</li></ol>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>22</title>
+      <link href="/2020/02/22/"/>
+      <url>/2020/02/22/</url>
+      
+        <content type="html"><![CDATA[<hr><p>title: JS学习笔记——Window<br>date: 2016-05-19 10:40:00<br>updated: %s<br>—<!--markdown-->## 计时器</p><blockquote><p>引用自<a href="http://www.w3school.com.cn" target="_blank" rel="noopener">w3school</a></p></blockquote><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span></span><br><span class="line"><span class="actionscript"><span class="keyword">var</span> c=<span class="number">0</span></span></span><br><span class="line"><span class="actionscript"><span class="keyword">var</span> t</span></span><br><span class="line"></span><br><span class="line"><span class="actionscript"><span class="function"><span class="keyword">function</span> <span class="title">timedCount</span><span class="params">()</span></span></span></span><br><span class="line"> &#123;</span><br><span class="line"><span class="javascript"> <span class="built_in">document</span>.getElementById(<span class="string">'txt'</span>).value=c</span></span><br><span class="line"> c=c+1</span><br><span class="line"><span class="actionscript"> t=setTimeout(<span class="string">"timedCount()"</span>,<span class="number">1000</span>)</span></span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"><span class="actionscript"><span class="function"><span class="keyword">function</span> <span class="title">stopCount</span><span class="params">()</span></span></span></span><br><span class="line"> &#123;</span><br><span class="line"> clearTimeout(t)</span><br><span class="line"> &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">form</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">value</span>=<span class="string">"Start count!"</span> <span class="attr">onClick</span>=<span class="string">"timedCount()"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">id</span>=<span class="string">"txt"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">value</span>=<span class="string">"Stop count!"</span> <span class="attr">onClick</span>=<span class="string">"stopCount()"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure><p><em>多采用递归的方式</em></p><h2 id="Cookies"><a href="#Cookies" class="headerlink" title="Cookies"></a>Cookies</h2><p><code>document.cookies</code>对象<br><code>escape()</code>用于转义<br><code>Date()</code>对象用于修改过期时间</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>46</title>
+      <link href="/2020/02/46/"/>
+      <url>/2020/02/46/</url>
+      
+        <content type="html"><![CDATA[<hr><p>title: docker ce笔记<br>date: 2017-11-25 14:51:00<br>updated: %s<br>—<!--markdown-->## CentOS 7.4下安装</p><h3 id="卸载老版"><a href="#卸载老版" class="headerlink" title="卸载老版"></a>卸载老版</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo yum remove docker \</span><br><span class="line">                  docker-common \</span><br><span class="line">                  docker-selinux \</span><br><span class="line">                  docker-engine</span><br></pre></td></tr></table></figure><h3 id="安装官方yum源"><a href="#安装官方yum源" class="headerlink" title="安装官方yum源"></a>安装官方yum源</h3><p>安装依赖</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install -y yum-utils \</span><br><span class="line">  device-mapper-persistent-data \</span><br><span class="line">  lvm2</span><br></pre></td></tr></table></figure><h3 id="添加源"><a href="#添加源" class="headerlink" title="添加源"></a>添加源</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo yum-config-manager \</span><br><span class="line">    --add-repo \</span><br><span class="line">    https://download.docker.com/linux/centos/docker-ce.repo</span><br></pre></td></tr></table></figure><h3 id="安装docker-ce"><a href="#安装docker-ce" class="headerlink" title="安装docker-ce"></a>安装docker-ce</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install docker-ce</span><br></pre></td></tr></table></figure><p><em>tips:</em></p><ol><li>安装指定版本 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum list docker-ce --showduplicates | sort -r</span><br><span class="line">sudo yum install &lt;指定版本的包名&gt;</span><br></pre></td></tr></table></figure></li></ol><h3 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl start docker</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>first </title>
       <link href="/2020/01/first/"/>
       <url>/2020/01/first/</url>
