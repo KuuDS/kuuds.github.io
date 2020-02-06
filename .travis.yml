@@ -13,6 +13,7 @@ deploy:
   skip-cleanup: true
   github-token: $GH_TOKEN
   keep-history: true
+  fqdn: blog.kuuds.me
   on:
     branch: source
   local-dir: public
