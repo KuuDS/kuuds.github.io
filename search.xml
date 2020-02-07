@@ -37,6 +37,18 @@
       </categories>
       
       
+        <tags>
+            
+            <tag> git </tag>
+            
+            <tag> msys2 </tag>
+            
+            <tag> window </tag>
+            
+            <tag> vscode </tag>
+            
+        </tags>
+      
     </entry>
     
     
@@ -55,6 +67,14 @@
           
       </categories>
       
+      
+        <tags>
+            
+            <tag> linux </tag>
+            
+            <tag> docker </tag>
+            
+        </tags>
       
     </entry>
     
@@ -94,6 +114,12 @@
       </categories>
       
       
+        <tags>
+            
+            <tag> nginx </tag>
+            
+        </tags>
+      
     </entry>
     
     
@@ -132,6 +158,14 @@
       </categories>
       
       
+        <tags>
+            
+            <tag> http </tag>
+            
+            <tag> protocol </tag>
+            
+        </tags>
+      
     </entry>
     
     
@@ -150,6 +184,12 @@
           
       </categories>
       
+      
+        <tags>
+            
+            <tag> msyql </tag>
+            
+        </tags>
       
     </entry>
     
@@ -170,6 +210,12 @@
       </categories>
       
       
+        <tags>
+            
+            <tag> git </tag>
+            
+        </tags>
+      
     </entry>
     
     
@@ -188,6 +234,14 @@
           
       </categories>
       
+      
+        <tags>
+            
+            <tag> samba </tag>
+            
+            <tag> selinux </tag>
+            
+        </tags>
       
     </entry>
     
@@ -208,6 +262,16 @@
       </categories>
       
       
+        <tags>
+            
+            <tag> linux </tag>
+            
+            <tag> corebird </tag>
+            
+            <tag> twitter </tag>
+            
+        </tags>
+      
     </entry>
     
     
@@ -226,6 +290,14 @@
           
       </categories>
       
+      
+        <tags>
+            
+            <tag> linux </tag>
+            
+            <tag> bt-keyboard </tag>
+            
+        </tags>
       
     </entry>
     
@@ -246,6 +318,14 @@
       </categories>
       
       
+        <tags>
+            
+            <tag> android </tag>
+            
+            <tag> gfw </tag>
+            
+        </tags>
+      
     </entry>
     
     
@@ -264,6 +344,12 @@
           
       </categories>
       
+      
+        <tags>
+            
+            <tag> docker </tag>
+            
+        </tags>
       
     </entry>
     
@@ -302,6 +388,12 @@
           
       </categories>
       
+      
+        <tags>
+            
+            <tag> linux </tag>
+            
+        </tags>
       
     </entry>
     
@@ -360,6 +452,12 @@
       </categories>
       
       
+        <tags>
+            
+            <tag> nexus </tag>
+            
+        </tags>
+      
     </entry>
     
     
@@ -378,6 +476,14 @@
           
       </categories>
       
+      
+        <tags>
+            
+            <tag> shell </tag>
+            
+            <tag> man </tag>
+            
+        </tags>
       
     </entry>
     
@@ -398,6 +504,16 @@
       </categories>
       
       
+        <tags>
+            
+            <tag> centos </tag>
+            
+            <tag> docker </tag>
+            
+            <tag> docker-ce </tag>
+            
+        </tags>
+      
     </entry>
     
     
@@ -416,6 +532,14 @@
           
       </categories>
       
+      
+        <tags>
+            
+            <tag> yum </tag>
+            
+            <tag> centos </tag>
+            
+        </tags>
       
     </entry>
     
@@ -436,6 +560,16 @@
       </categories>
       
       
+        <tags>
+            
+            <tag> linux </tag>
+            
+            <tag> centos </tag>
+            
+            <tag> deamontools </tag>
+            
+        </tags>
+      
     </entry>
     
     
@@ -454,6 +588,16 @@
           
       </categories>
       
+      
+        <tags>
+            
+            <tag> linux </tag>
+            
+            <tag> centos </tag>
+            
+            <tag> daemontools </tag>
+            
+        </tags>
       
     </entry>
     
@@ -474,6 +618,14 @@
       </categories>
       
       
+        <tags>
+            
+            <tag> linux </tag>
+            
+            <tag> daemontools </tag>
+            
+        </tags>
+      
     </entry>
     
     
@@ -493,6 +645,14 @@
       </categories>
       
       
+        <tags>
+            
+            <tag> java </tag>
+            
+            <tag> maven </tag>
+            
+        </tags>
+      
     </entry>
     
     
@@ -511,6 +671,16 @@
           
       </categories>
       
+      
+        <tags>
+            
+            <tag> yum </tag>
+            
+            <tag> centos </tag>
+            
+            <tag> killall </tag>
+            
+        </tags>
       
     </entry>
     
@@ -549,6 +719,12 @@
           
       </categories>
       
+      
+        <tags>
+            
+            <tag> git </tag>
+            
+        </tags>
       
     </entry>
     
@@ -626,6 +802,12 @@
       </categories>
       
       
+        <tags>
+            
+            <tag> mysql </tag>
+            
+        </tags>
+      
     </entry>
     
     
@@ -702,6 +884,12 @@
       </categories>
       
       
+        <tags>
+            
+            <tag> javascript </tag>
+            
+        </tags>
+      
     </entry>
     
     
@@ -720,6 +908,12 @@
           
       </categories>
       
+      
+        <tags>
+            
+            <tag> openwrt </tag>
+            
+        </tags>
       
     </entry>
     
@@ -778,6 +972,14 @@
       </categories>
       
       
+        <tags>
+            
+            <tag> js </tag>
+            
+            <tag> ajax </tag>
+            
+        </tags>
+      
     </entry>
     
     
@@ -796,6 +998,12 @@
           
       </categories>
       
+      
+        <tags>
+            
+            <tag> mysql </tag>
+            
+        </tags>
       
     </entry>
     
@@ -835,6 +1043,14 @@
       </categories>
       
       
+        <tags>
+            
+            <tag> java </tag>
+            
+            <tag> eclipse </tag>
+            
+        </tags>
+      
     </entry>
     
     
@@ -854,6 +1070,12 @@
       </categories>
       
       
+        <tags>
+            
+            <tag> windows </tag>
+            
+        </tags>
+      
     </entry>
     
     
@@ -872,6 +1094,14 @@
           
       </categories>
       
+      
+        <tags>
+            
+            <tag> js </tag>
+            
+            <tag> javascript </tag>
+            
+        </tags>
       
     </entry>
     
@@ -929,6 +1159,14 @@
           
       </categories>
       
+      
+        <tags>
+            
+            <tag> linux </tag>
+            
+            <tag> iptables </tag>
+            
+        </tags>
       
     </entry>
     
