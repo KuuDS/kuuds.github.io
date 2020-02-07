@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="## 说明  根据zookeeper官方文档，使用daemontools监视zk，编译时遇到报错 1234&#x2F;usr&#x2F;bin&#x2F;ld: errno: TLS definition in &#x2F;lib64&#x2F;libc.so.6 section .tbss mismatches non-TLS reference in envdir.o&#x2F;lib64&#x2F;libc.so.6: error adding symbols">
+    <meta name="description" content="说明根据zookeeper官方文档，使用daemontools监视zk，编译时遇到报错 1234&#x2F;usr&#x2F;bin&#x2F;ld: errno: TLS definition in &#x2F;lib64&#x2F;libc.so.6 section .tbss mismatches non-TLS reference in envdir.o&#x2F;lib64&#x2F;libc.so.6: error adding symbols: Bad">
 <meta property="og:type" content="article">
 <meta property="og:title" content="编译daemontools报错">
 <meta property="og:url" content="https://blog.kuuds.me/2017/11/42/">
 <meta property="og:site_name" content="KuuDS#Dev">
-<meta property="og:description" content="## 说明  根据zookeeper官方文档，使用daemontools监视zk，编译时遇到报错 1234&#x2F;usr&#x2F;bin&#x2F;ld: errno: TLS definition in &#x2F;lib64&#x2F;libc.so.6 section .tbss mismatches non-TLS reference in envdir.o&#x2F;lib64&#x2F;libc.so.6: error adding symbols">
+<meta property="og:description" content="说明根据zookeeper官方文档，使用daemontools监视zk，编译时遇到报错 1234&#x2F;usr&#x2F;bin&#x2F;ld: errno: TLS definition in &#x2F;lib64&#x2F;libc.so.6 section .tbss mismatches non-TLS reference in envdir.o&#x2F;lib64&#x2F;libc.so.6: error adding symbols: Bad">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2017-11-21T03:17:24.000Z">
 <meta property="article:modified_time" content="2017-11-21T03:17:24.000Z">
@@ -111,7 +111,7 @@
 
     </div>
     <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#资料"><span class="toc-number">1.</span> <span class="toc-text">资料</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#说明"><span class="toc-number">1.</span> <span class="toc-text">说明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#资料"><span class="toc-number">2.</span> <span class="toc-text">资料</span></a></li></ol>
     </div>
   </span>
 </div>
@@ -150,9 +150,7 @@
   
 
   <div class="content" itemprop="articleBody">
-    <!--markdown-->## 说明
-
-<p>根据<code>zookeeper</code>官方文档，使用<code>daemontools</code>监视<code>zk</code>，编译时遇到报错</p>
+    <h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>根据<code>zookeeper</code>官方文档，使用<code>daemontools</code>监视<code>zk</code>，编译时遇到报错</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/ld: errno: TLS definition <span class="keyword">in</span> /lib64/libc.so.6 section .tbss mismatches non-TLS reference <span class="keyword">in</span> envdir.o</span><br><span class="line">/lib64/libc.so.6: error adding symbols: Bad value</span><br><span class="line">collect2: error: ld returned 1 <span class="built_in">exit</span> status</span><br><span class="line">make: *** [envdir] Error 1</span><br></pre></td></tr></table></figure>
 
 <p>#</p>
@@ -189,7 +187,7 @@
     </div>
 
     <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#资料"><span class="toc-number">1.</span> <span class="toc-text">资料</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#说明"><span class="toc-number">1.</span> <span class="toc-text">说明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#资料"><span class="toc-number">2.</span> <span class="toc-text">资料</span></a></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">

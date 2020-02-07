@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="## 配置SELINUX  1chcon -t samba_share_t [path&#x2F;to&#x2F;share]  ##　配置iptables 1234iptables -I INPUT 3 -m state --state NEW -m tcp -p tcp --dport 139 -j ACCEPT &amp;&amp; \iptables -I INPUT 4 -m state --state N">
+    <meta name="description" content="配置SELINUX1chcon -t samba_share_t [path&#x2F;to&#x2F;share]  ##　配置iptables 1234iptables -I INPUT 3 -m state --state NEW -m tcp -p tcp --dport 139 -j ACCEPT &amp;&amp; \iptables -I INPUT 4 -m state --state NEW -m">
 <meta property="og:type" content="article">
 <meta property="og:title" content="selinux打开samba权限">
 <meta property="og:url" content="https://blog.kuuds.me/2018/03/58/">
 <meta property="og:site_name" content="KuuDS#Dev">
-<meta property="og:description" content="## 配置SELINUX  1chcon -t samba_share_t [path&#x2F;to&#x2F;share]  ##　配置iptables 1234iptables -I INPUT 3 -m state --state NEW -m tcp -p tcp --dport 139 -j ACCEPT &amp;&amp; \iptables -I INPUT 4 -m state --state N">
+<meta property="og:description" content="配置SELINUX1chcon -t samba_share_t [path&#x2F;to&#x2F;share]  ##　配置iptables 1234iptables -I INPUT 3 -m state --state NEW -m tcp -p tcp --dport 139 -j ACCEPT &amp;&amp; \iptables -I INPUT 4 -m state --state NEW -m">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2018-03-05T07:56:00.000Z">
 <meta property="article:modified_time" content="2018-03-05T11:27:50.000Z">
@@ -111,7 +111,7 @@
 
     </div>
     <div id="toc">
-      
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#配置SELINUX"><span class="toc-number">1.</span> <span class="toc-text">配置SELINUX</span></a></li></ol>
     </div>
   </span>
 </div>
@@ -150,9 +150,7 @@
   
 
   <div class="content" itemprop="articleBody">
-    <!--markdown-->## 配置SELINUX
-
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chcon -t samba_share_t [path/to/share]</span><br></pre></td></tr></table></figure>
+    <h2 id="配置SELINUX"><a href="#配置SELINUX" class="headerlink" title="配置SELINUX"></a>配置SELINUX</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chcon -t samba_share_t [path/to/share]</span><br></pre></td></tr></table></figure>
 
 <p>##　配置iptables</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">iptables -I INPUT 3 -m state --state NEW -m tcp -p tcp --dport 139 -j ACCEPT &amp;&amp; \</span><br><span class="line">iptables -I INPUT 4 -m state --state NEW -m udp -p udp --dport 139 -j ACCEPT &amp;&amp; \</span><br><span class="line">iptables -I INPUT 5 -m state --state NEW -m tcp -p tcp --dport 445 -j ACCEPT &amp;&amp; \</span><br><span class="line">iptables -I INPUT 6 -m state --state NEW -m udp -p udp --dport 445 -j ACCEPT</span><br></pre></td></tr></table></figure>
@@ -186,7 +184,7 @@
     </div>
 
     <div id="toc-footer" style="display: none">
-      
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#配置SELINUX"><span class="toc-number">1.</span> <span class="toc-text">配置SELINUX</span></a></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">

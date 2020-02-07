@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="# 情景 公司前置机双网卡，连接到两个局域网A网卡ip:172.16.X.XB网卡ip:158.2.X.X 两个网络中都有192.168.X.X现业务仅需要使用A网络中的目标机器 命令:route add [ip机器] [掩码] [网关] [接口] metric [跃点数] -p接口 链路中下一个传递的目标(一般把设置为网卡的网关)-p  永久选项，测试时应先不使用该参数(重启后，该规则会自动清楚">
+    <meta name="description" content="情景公司前置机双网卡，连接到两个局域网A网卡ip:172.16.X.XB网卡ip:158.2.X.X 两个网络中都有192.168.X.X现业务仅需要使用A网络中的目标机器 命令:route add [ip机器] [掩码] [网关] [接口] metric [跃点数] -p接口 链路中下一个传递的目标(一般把设置为网卡的网关)-p  永久选项，测试时应先不使用该参数(重启后，该规则会自动清楚)，完">
 <meta property="og:type" content="article">
 <meta property="og:title" content="windows路由表设置">
 <meta property="og:url" content="https://blog.kuuds.me/2015/11/8/">
 <meta property="og:site_name" content="KuuDS#Dev">
-<meta property="og:description" content="# 情景 公司前置机双网卡，连接到两个局域网A网卡ip:172.16.X.XB网卡ip:158.2.X.X 两个网络中都有192.168.X.X现业务仅需要使用A网络中的目标机器 命令:route add [ip机器] [掩码] [网关] [接口] metric [跃点数] -p接口 链路中下一个传递的目标(一般把设置为网卡的网关)-p  永久选项，测试时应先不使用该参数(重启后，该规则会自动清楚">
+<meta property="og:description" content="情景公司前置机双网卡，连接到两个局域网A网卡ip:172.16.X.XB网卡ip:158.2.X.X 两个网络中都有192.168.X.X现业务仅需要使用A网络中的目标机器 命令:route add [ip机器] [掩码] [网关] [接口] metric [跃点数] -p接口 链路中下一个传递的目标(一般把设置为网卡的网关)-p  永久选项，测试时应先不使用该参数(重启后，该规则会自动清楚)，完">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2015-11-18T07:11:00.000Z">
 <meta property="article:modified_time" content="2016-02-05T13:33:28.000Z">
@@ -111,7 +111,7 @@
 
     </div>
     <div id="toc">
-      
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#情景"><span class="toc-number">1.</span> <span class="toc-text">情景</span></a></li></ol>
     </div>
   </span>
 </div>
@@ -150,8 +150,7 @@
   
 
   <div class="content" itemprop="articleBody">
-    <!--markdown--># 情景
-<p>公司前置机双网卡，连接到两个局域网<br><code>A网卡</code>ip:<code>172.16.X.X</code><br><code>B网卡</code>ip:<code>158.2.X.X</code></p>
+    <h1 id="情景"><a href="#情景" class="headerlink" title="情景"></a>情景</h1><p>公司前置机双网卡，连接到两个局域网<br><code>A网卡</code>ip:<code>172.16.X.X</code><br><code>B网卡</code>ip:<code>158.2.X.X</code></p>
 <p>两个网络中都有<code>192.168.X.X</code><br>现业务仅需要使用A网络中的目标机器</p>
 <p>命令:<code>route add [ip机器] [掩码] [网关] [接口] metric [跃点数] -p</code><br><code>接口</code> 链路中下一个传递的目标(一般把设置为网卡的网关)<br><code>-p</code>  永久选项，测试时应先不使用该参数(重启后，该规则会自动清楚)，完成测试后再加入该选项</p>
 <p>备忘<br>*<code>ROUTE ADD 192.123.0.0 MASK 255.255.0.0. 192.123.172.250 if 3</code><br>*<code>if</code>处的参数可以通过<code>route print</code>命令打印结果的开头找到对应值`</p>
@@ -184,7 +183,7 @@
     </div>
 
     <div id="toc-footer" style="display: none">
-      
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#情景"><span class="toc-number">1.</span> <span class="toc-text">情景</span></a></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">

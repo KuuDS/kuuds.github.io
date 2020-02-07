@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="# varchar mysql中的varchar类似于Orcale中的nvarchar，用于记录字符数目，而不是字节数量 varchar(n)表示可以存储n个字符，无关编码，但是n的最大值和编码有关各种类型字段存储大小，其中vchar和BLOB以及TEXT相同 1234TINYBLOB, TINYTEXT       L + 1 bytes, where L &lt; 2^8    (255 By">
+    <meta name="description" content="varcharmysql中的varchar类似于Orcale中的nvarchar，用于记录字符数目，而不是字节数量 varchar(n)表示可以存储n个字符，无关编码，但是n的最大值和编码有关各种类型字段存储大小，其中vchar和BLOB以及TEXT相同 1234TINYBLOB, TINYTEXT       L + 1 bytes, where L &lt; 2^8    (255 Bytes">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MySQL中的varchar">
 <meta property="og:url" content="https://blog.kuuds.me/2016/03/16/">
 <meta property="og:site_name" content="KuuDS#Dev">
-<meta property="og:description" content="# varchar mysql中的varchar类似于Orcale中的nvarchar，用于记录字符数目，而不是字节数量 varchar(n)表示可以存储n个字符，无关编码，但是n的最大值和编码有关各种类型字段存储大小，其中vchar和BLOB以及TEXT相同 1234TINYBLOB, TINYTEXT       L + 1 bytes, where L &lt; 2^8    (255 By">
+<meta property="og:description" content="varcharmysql中的varchar类似于Orcale中的nvarchar，用于记录字符数目，而不是字节数量 varchar(n)表示可以存储n个字符，无关编码，但是n的最大值和编码有关各种类型字段存储大小，其中vchar和BLOB以及TEXT相同 1234TINYBLOB, TINYTEXT       L + 1 bytes, where L &lt; 2^8    (255 Bytes">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2016-03-02T06:56:00.000Z">
 <meta property="article:modified_time" content="2016-03-02T08:13:22.000Z">
@@ -111,7 +111,7 @@
 
     </div>
     <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#参考"><span class="toc-number">1.</span> <span class="toc-text">参考:</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#varchar"><span class="toc-number">1.</span> <span class="toc-text">varchar</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#参考"><span class="toc-number">1.1.</span> <span class="toc-text">参考:</span></a></li></ol></li></ol>
     </div>
   </span>
 </div>
@@ -150,8 +150,7 @@
   
 
   <div class="content" itemprop="articleBody">
-    <!--markdown--># varchar
-<p>mysql中的<code>varchar</code>类似于Orcale中的<code>nvarchar</code>，用于记录字符数目，而不是字节数量</p>
+    <h1 id="varchar"><a href="#varchar" class="headerlink" title="varchar"></a>varchar</h1><p>mysql中的<code>varchar</code>类似于Orcale中的<code>nvarchar</code>，用于记录字符数目，而不是字节数量</p>
 <p><code>varchar(n)</code>表示可以存储n个字符，无关编码，但是<code>n</code>的最大值和编码有关<br>各种类型字段存储大小，其中<code>vchar</code>和<code>BLOB</code>以及<code>TEXT</code>相同</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">TINYBLOB, TINYTEXT       L + 1 bytes, where L &lt; 2^8    (255 Bytes)</span><br><span class="line">BLOB, TEXT               L + 2 bytes, where L &lt; 2^16   (64 Kilobytes)</span><br><span class="line">MEDIUMBLOB, MEDIUMTEXT   L + 3 bytes, where L &lt; 2^24   (16 Megabytes)</span><br><span class="line">LONGBLOB, LONGTEXT       L + 4 bytes, where L &lt; 2^32   (4 Gigabytes)</span><br></pre></td></tr></table></figure>
 
@@ -191,7 +190,7 @@
     </div>
 
     <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#参考"><span class="toc-number">1.</span> <span class="toc-text">参考:</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#varchar"><span class="toc-number">1.</span> <span class="toc-text">varchar</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#参考"><span class="toc-number">1.1.</span> <span class="toc-text">参考:</span></a></li></ol></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">

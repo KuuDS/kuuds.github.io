@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="# Skipping in Cli 12# true as default value maven &lt;goal&gt; -DskipTests&#x3D;&lt;true|false&gt;  skipping in project12345678910111213141516  &lt;project&gt;  [...]  &lt;build&gt;    &lt;plugins&gt;">
+    <meta name="description" content="Skipping in Cli12# true as default value maven &lt;goal&gt; -DskipTests&#x3D;&lt;true|false&gt;  skipping in project12345678910111213141516  &lt;project&gt;  [...]  &lt;build&gt;    &lt;plugins&gt;      &amp;l">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Maven - skipping the tests">
 <meta property="og:url" content="https://blog.kuuds.me/2017/10/37/">
 <meta property="og:site_name" content="KuuDS#Dev">
-<meta property="og:description" content="# Skipping in Cli 12# true as default value maven &lt;goal&gt; -DskipTests&#x3D;&lt;true|false&gt;  skipping in project12345678910111213141516  &lt;project&gt;  [...]  &lt;build&gt;    &lt;plugins&gt;">
+<meta property="og:description" content="Skipping in Cli12# true as default value maven &lt;goal&gt; -DskipTests&#x3D;&lt;true|false&gt;  skipping in project12345678910111213141516  &lt;project&gt;  [...]  &lt;build&gt;    &lt;plugins&gt;      &amp;l">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2017-10-19T12:10:00.000Z">
 <meta property="article:modified_time" content="2017-10-19T12:01:25.000Z">
@@ -111,7 +111,7 @@
 
     </div>
     <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#skipping-in-project"><span class="toc-number">1.</span> <span class="toc-text">skipping in project</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#skipping-by-default"><span class="toc-number">2.</span> <span class="toc-text">skipping by default</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Skipping-in-Cli"><span class="toc-number">1.</span> <span class="toc-text">Skipping in Cli</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#skipping-in-project"><span class="toc-number">2.</span> <span class="toc-text">skipping in project</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#skipping-by-default"><span class="toc-number">3.</span> <span class="toc-text">skipping by default</span></a></li></ol>
     </div>
   </span>
 </div>
@@ -150,8 +150,7 @@
   
 
   <div class="content" itemprop="articleBody">
-    <!--markdown--># Skipping in Cli
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># true as default value </span></span><br><span class="line">maven &lt;goal&gt; -DskipTests=&lt;<span class="literal">true</span>|<span class="literal">false</span>&gt;</span><br></pre></td></tr></table></figure>
+    <h1 id="Skipping-in-Cli"><a href="#Skipping-in-Cli" class="headerlink" title="Skipping in Cli"></a>Skipping in Cli</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># true as default value </span></span><br><span class="line">maven &lt;goal&gt; -DskipTests=&lt;<span class="literal">true</span>|<span class="literal">false</span>&gt;</span><br></pre></td></tr></table></figure>
 
 <h1 id="skipping-in-project"><a href="#skipping-in-project" class="headerlink" title="skipping in project"></a>skipping in project</h1><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">  <span class="tag">&lt;<span class="name">project</span>&gt;</span></span><br><span class="line">  [...]</span><br><span class="line">  <span class="tag">&lt;<span class="name">build</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">plugins</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.maven.plugins<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>maven-surefire-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.12.4<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">skipTests</span>&gt;</span>true<span class="tag">&lt;/<span class="name">skipTests</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">plugins</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">build</span>&gt;</span></span><br><span class="line">  [...]</span><br><span class="line"><span class="tag">&lt;/<span class="name">project</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
@@ -188,7 +187,7 @@
     </div>
 
     <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#skipping-in-project"><span class="toc-number">1.</span> <span class="toc-text">skipping in project</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#skipping-by-default"><span class="toc-number">2.</span> <span class="toc-text">skipping by default</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Skipping-in-Cli"><span class="toc-number">1.</span> <span class="toc-text">Skipping in Cli</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#skipping-in-project"><span class="toc-number">2.</span> <span class="toc-text">skipping in project</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#skipping-by-default"><span class="toc-number">3.</span> <span class="toc-text">skipping by default</span></a></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">

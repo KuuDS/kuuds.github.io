@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="## 前言  测试机，系统小版本升级，yum更新包前自检报错。由于未记录详细信息，简单回忆一下 过程yum update遇到如下问题 12File &quot;&#x2F;usr&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;yum&#x2F;fssnapshots.py&quot;, line 55, in _list_vg_nameslvm.L">
+    <meta name="description" content="前言测试机，系统小版本升级，yum更新包前自检报错。由于未记录详细信息，简单回忆一下 过程yum update遇到如下问题 12File &quot;&#x2F;usr&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;yum&#x2F;fssnapshots.py&quot;, line 55, in _list_vg_nameslvm.LibLVM">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CentOS7 Yum修复">
 <meta property="og:url" content="https://blog.kuuds.me/2017/11/45/">
 <meta property="og:site_name" content="KuuDS#Dev">
-<meta property="og:description" content="## 前言  测试机，系统小版本升级，yum更新包前自检报错。由于未记录详细信息，简单回忆一下 过程yum update遇到如下问题 12File &quot;&#x2F;usr&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;yum&#x2F;fssnapshots.py&quot;, line 55, in _list_vg_nameslvm.L">
+<meta property="og:description" content="前言测试机，系统小版本升级，yum更新包前自检报错。由于未记录详细信息，简单回忆一下 过程yum update遇到如下问题 12File &quot;&#x2F;usr&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;yum&#x2F;fssnapshots.py&quot;, line 55, in _list_vg_nameslvm.LibLVM">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2017-11-21T09:58:00.000Z">
 <meta property="article:modified_time" content="2017-11-25T07:01:43.000Z">
@@ -111,7 +111,7 @@
 
     </div>
     <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#过程"><span class="toc-number">1.</span> <span class="toc-text">过程</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#过程"><span class="toc-number">2.</span> <span class="toc-text">过程</span></a></li></ol>
     </div>
   </span>
 </div>
@@ -150,9 +150,7 @@
   
 
   <div class="content" itemprop="articleBody">
-    <!--markdown-->## 前言
-
-<p>测试机，系统小版本升级，yum更新包前自检报错。由于未记录详细信息，简单回忆一下</p>
+    <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>测试机，系统小版本升级，yum更新包前自检报错。由于未记录详细信息，简单回忆一下</p>
 <h2 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h2><p><code>yum update</code>遇到如下问题</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">File &quot;&#x2F;usr&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;yum&#x2F;fssnapshots.py&quot;, line 55, in _list_vg_names</span><br><span class="line">lvm.LibLVMError: (-1, &#39;Request to list VGs in lvmetad gave response Connection reset by peer.&#39;) yum</span><br></pre></td></tr></table></figure>
 
@@ -189,7 +187,7 @@
     </div>
 
     <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#过程"><span class="toc-number">1.</span> <span class="toc-text">过程</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#过程"><span class="toc-number">2.</span> <span class="toc-text">过程</span></a></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">

@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="&#96;&#96;&#96;batch powershell get-filehash -algorithm md5  1234&#96;&#96;&#96;batchcertUtil -hashfile pathToFileToCheck [HashAlgorithm]  HashAlgorithm choices: MD2 MD4 MD5 SHA1 SHA256 SHA384 SHA512 StackExchang">
+    <meta name="description" content="1powershell get-filehash -algorithm md5 &lt;file_to_check&gt;   1certUtil -hashfile pathToFileToCheck [HashAlgorithm]  HashAlgorithm choices: MD2 MD4 MD5 SHA1 SHA256 SHA384 SHA512 StackExchange">
 <meta property="og:type" content="article">
 <meta property="og:title" content="file check on windows">
 <meta property="og:url" content="https://blog.kuuds.me/2019/03/69/">
 <meta property="og:site_name" content="KuuDS#Dev">
-<meta property="og:description" content="&#96;&#96;&#96;batch powershell get-filehash -algorithm md5  1234&#96;&#96;&#96;batchcertUtil -hashfile pathToFileToCheck [HashAlgorithm]  HashAlgorithm choices: MD2 MD4 MD5 SHA1 SHA256 SHA384 SHA512 StackExchang">
+<meta property="og:description" content="1powershell get-filehash -algorithm md5 &lt;file_to_check&gt;   1certUtil -hashfile pathToFileToCheck [HashAlgorithm]  HashAlgorithm choices: MD2 MD4 MD5 SHA1 SHA256 SHA384 SHA512 StackExchange">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2019-03-08T03:13:00.000Z">
 <meta property="article:modified_time" content="2019-03-08T03:19:11.000Z">
@@ -148,9 +148,10 @@
   
 
   <div class="content" itemprop="articleBody">
-    <!--markdown-->```batch
-<p>powershell get-filehash -algorithm md5 <file_to_check></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;batch</span><br><span class="line">certUtil -hashfile pathToFileToCheck [HashAlgorithm]</span><br></pre></td></tr></table></figure>
+    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">powershell get-filehash -algorithm md5 &lt;file_to_check&gt;</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">certUtil -hashfile pathToFileToCheck [HashAlgorithm]</span><br></pre></td></tr></table></figure>
 
 <p>HashAlgorithm choices: MD2 MD4 MD5 SHA1 SHA256 SHA384 SHA512</p>
 <p><a href="https://superuser.com/questions/245775/is-there-a-built-in-checksum-utility-on-windows-7" target="_blank" rel="noopener">StackExchange</a></p>

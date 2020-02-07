@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="centos7下使用systemd注册服务  编辑&#x2F;etc&#x2F;systemd&#x2F;system&#x2F;daemontools.service 1234567891011121314[Unit]Description&#x3D;daemontools Start superviseAfter&#x3D;getty.target [Service]Type&#x3D;simpleUser&#x3D;rootGro">
+    <meta name="description" content="centos7下使用systemd注册服务 编辑&#x2F;etc&#x2F;systemd&#x2F;system&#x2F;daemontools.service 1234567891011121314[Unit]Description&#x3D;daemontools Start superviseAfter&#x3D;getty.target [Service]Type&#x3D;simpleUser&#x3D;rootGrou">
 <meta property="og:type" content="article">
 <meta property="og:title" content="centos下daemontools自启动">
 <meta property="og:url" content="https://blog.kuuds.me/2017/11/43/">
 <meta property="og:site_name" content="KuuDS#Dev">
-<meta property="og:description" content="centos7下使用systemd注册服务  编辑&#x2F;etc&#x2F;systemd&#x2F;system&#x2F;daemontools.service 1234567891011121314[Unit]Description&#x3D;daemontools Start superviseAfter&#x3D;getty.target [Service]Type&#x3D;simpleUser&#x3D;rootGro">
+<meta property="og:description" content="centos7下使用systemd注册服务 编辑&#x2F;etc&#x2F;systemd&#x2F;system&#x2F;daemontools.service 1234567891011121314[Unit]Description&#x3D;daemontools Start superviseAfter&#x3D;getty.target [Service]Type&#x3D;simpleUser&#x3D;rootGrou">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2017-11-21T05:57:00.000Z">
 <meta property="article:modified_time" content="2017-11-21T06:16:40.000Z">
@@ -150,8 +150,7 @@
   
 
   <div class="content" itemprop="articleBody">
-    <!--markdown-->centos7下使用systemd注册服务
-
+    <p>centos7下使用systemd注册服务</p>
 <p>编辑<code>/etc/systemd/system/daemontools.service</code></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">[Unit]</span><br><span class="line">Description&#x3D;daemontools Start supervise</span><br><span class="line">After&#x3D;getty.target</span><br><span class="line"> </span><br><span class="line">[Service]</span><br><span class="line">Type&#x3D;simple</span><br><span class="line">User&#x3D;root</span><br><span class="line">Group&#x3D;root</span><br><span class="line">Restart&#x3D;always</span><br><span class="line">ExecStart&#x3D;&#x2F;command&#x2F;svscanboot &#x2F;dev&#x2F;ttyS0</span><br><span class="line">TimeoutSec&#x3D;0</span><br><span class="line"> </span><br><span class="line">[Install]</span><br><span class="line">WantedBy&#x3D;multi-user.target</span><br></pre></td></tr></table></figure>
 

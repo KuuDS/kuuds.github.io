@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="&#96;&#96;&#96; trap { set rows [stty rows] set cols [stty columns] stty rows $rows columns $cols &lt; $spawn_out(slave,name)} WINCH&#96;&#96;&#96;">
+    <meta name="description" content="12345trap &amp;#123; set rows [stty rows] set cols [stty columns] stty rows $rows columns $cols &lt; $spawn_out(slave,name)&amp;#125; WINCH">
 <meta property="og:type" content="article">
 <meta property="og:title" content="expect根据终端窗口大小调整buffer行列">
 <meta property="og:url" content="https://blog.kuuds.me/2018/10/63/">
 <meta property="og:site_name" content="KuuDS#Dev">
-<meta property="og:description" content="&#96;&#96;&#96; trap { set rows [stty rows] set cols [stty columns] stty rows $rows columns $cols &lt; $spawn_out(slave,name)} WINCH&#96;&#96;&#96;">
+<meta property="og:description" content="12345trap &amp;#123; set rows [stty rows] set cols [stty columns] stty rows $rows columns $cols &lt; $spawn_out(slave,name)&amp;#125; WINCH">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2018-10-22T01:59:00.000Z">
 <meta property="article:modified_time" content="2018-10-29T02:11:16.000Z">
@@ -150,9 +150,7 @@
   
 
   <div class="content" itemprop="articleBody">
-    <!--markdown-->```
-<p>trap {<br> set rows [stty rows]<br> set cols [stty columns]<br> stty rows $rows columns $cols &lt; $spawn_out(slave,name)<br>} WINCH<br>```</p>
-
+    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">trap &#123;</span><br><span class="line"> set rows [stty rows]</span><br><span class="line"> set cols [stty columns]</span><br><span class="line"> stty rows $rows columns $cols &lt; $spawn_out(slave,name)</span><br><span class="line">&#125; WINCH</span><br></pre></td></tr></table></figure>
   </div>
 </article>
 

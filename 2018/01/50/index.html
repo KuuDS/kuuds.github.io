@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="&#96;&#96;&#96;xml               docker                                                            io.fabric8                     docker-maven-plugin                     0.22.1">
+    <meta name="description" content="1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950&lt;profiles&gt;    &lt;profile&gt;        &lt;id&gt;docker&lt;&#x2F;id&gt;        &lt;build&gt;            &lt;pl">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Example pom file for maven project with docker">
 <meta property="og:url" content="https://blog.kuuds.me/2018/01/50/">
 <meta property="og:site_name" content="KuuDS#Dev">
-<meta property="og:description" content="&#96;&#96;&#96;xml               docker                                                            io.fabric8                     docker-maven-plugin                     0.22.1">
+<meta property="og:description" content="1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950&lt;profiles&gt;    &lt;profile&gt;        &lt;id&gt;docker&lt;&#x2F;id&gt;        &lt;build&gt;            &lt;pl">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2018-01-09T02:50:22.000Z">
 <meta property="article:modified_time" content="2018-01-09T02:52:15.000Z">
@@ -150,58 +150,7 @@
   
 
   <div class="content" itemprop="articleBody">
-    <!--markdown-->```xml
-<profiles>
-    <profile>
-        <id>docker</id>
-        <build>
-            <plugins>
-                <plugin>
-                    <groupId>io.fabric8</groupId>
-                    <artifactId>docker-maven-plugin</artifactId>
-                    <version>0.22.1</version>
-                    <configuration>
-                        <images>
-                            <image>
-                                <name>hello-java</name>
-                                <build>
-                                    <from>openjdk:latest</from>
-                                    <assembly>
-                                        <descriptorRef>artifact</descriptorRef>
-                                    </assembly>
-                                    <cmd>java -cp maven/${project.name}-${project.version}.jar org.examples.java.App</cmd>
-                                </build>
-                                <run>
-                                    <wait>
-                                        <log>Hello World!</log>
-                                    </wait>
-                                </run>
-                            </image>
-                        </images>
-                    </configuration>
-                    <executions>
-                        <execution>
-                            <id>docker:build</id>
-                            <phase>package</phase>
-                            <goals>
-                                <goal>build</goal>
-                            </goals>
-                        </execution>
-                        <execution>
-                            <id>docker:start</id>
-                            <phase>install</phase>
-                            <goals>
-                                <goal>start</goal>
-                                <goal>logs</goal>
-                            </goals>
-                        </execution>
-                    </executions>
-                </plugin>
-            </plugins>
-        </build>
-    </profile>
-</profiles>
-```
+    <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">profiles</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">profile</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">id</span>&gt;</span>docker<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">build</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">plugins</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>io.fabric8<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>docker-maven-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">version</span>&gt;</span>0.22.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">images</span>&gt;</span></span><br><span class="line">                            <span class="tag">&lt;<span class="name">image</span>&gt;</span></span><br><span class="line">                                <span class="tag">&lt;<span class="name">name</span>&gt;</span>hello-java<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">                                <span class="tag">&lt;<span class="name">build</span>&gt;</span></span><br><span class="line">                                    <span class="tag">&lt;<span class="name">from</span>&gt;</span>openjdk:latest<span class="tag">&lt;/<span class="name">from</span>&gt;</span></span><br><span class="line">                                    <span class="tag">&lt;<span class="name">assembly</span>&gt;</span></span><br><span class="line">                                        <span class="tag">&lt;<span class="name">descriptorRef</span>&gt;</span>artifact<span class="tag">&lt;/<span class="name">descriptorRef</span>&gt;</span></span><br><span class="line">                                    <span class="tag">&lt;/<span class="name">assembly</span>&gt;</span></span><br><span class="line">                                    <span class="tag">&lt;<span class="name">cmd</span>&gt;</span>java -cp maven/$&#123;project.name&#125;-$&#123;project.version&#125;.jar org.examples.java.App<span class="tag">&lt;/<span class="name">cmd</span>&gt;</span></span><br><span class="line">                                <span class="tag">&lt;/<span class="name">build</span>&gt;</span></span><br><span class="line">                                <span class="tag">&lt;<span class="name">run</span>&gt;</span></span><br><span class="line">                                    <span class="tag">&lt;<span class="name">wait</span>&gt;</span></span><br><span class="line">                                        <span class="tag">&lt;<span class="name">log</span>&gt;</span>Hello World!<span class="tag">&lt;/<span class="name">log</span>&gt;</span></span><br><span class="line">                                    <span class="tag">&lt;/<span class="name">wait</span>&gt;</span></span><br><span class="line">                                <span class="tag">&lt;/<span class="name">run</span>&gt;</span></span><br><span class="line">                            <span class="tag">&lt;/<span class="name">image</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;/<span class="name">images</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">executions</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">execution</span>&gt;</span></span><br><span class="line">                            <span class="tag">&lt;<span class="name">id</span>&gt;</span>docker:build<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">                            <span class="tag">&lt;<span class="name">phase</span>&gt;</span>package<span class="tag">&lt;/<span class="name">phase</span>&gt;</span></span><br><span class="line">                            <span class="tag">&lt;<span class="name">goals</span>&gt;</span></span><br><span class="line">                                <span class="tag">&lt;<span class="name">goal</span>&gt;</span>build<span class="tag">&lt;/<span class="name">goal</span>&gt;</span></span><br><span class="line">                            <span class="tag">&lt;/<span class="name">goals</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;/<span class="name">execution</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">execution</span>&gt;</span></span><br><span class="line">                            <span class="tag">&lt;<span class="name">id</span>&gt;</span>docker:start<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">                            <span class="tag">&lt;<span class="name">phase</span>&gt;</span>install<span class="tag">&lt;/<span class="name">phase</span>&gt;</span></span><br><span class="line">                            <span class="tag">&lt;<span class="name">goals</span>&gt;</span></span><br><span class="line">                                <span class="tag">&lt;<span class="name">goal</span>&gt;</span>start<span class="tag">&lt;/<span class="name">goal</span>&gt;</span></span><br><span class="line">                                <span class="tag">&lt;<span class="name">goal</span>&gt;</span>logs<span class="tag">&lt;/<span class="name">goal</span>&gt;</span></span><br><span class="line">                            <span class="tag">&lt;/<span class="name">goals</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;/<span class="name">execution</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">executions</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">plugins</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">build</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">profile</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">profiles</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>ps:</p>
 <ol>

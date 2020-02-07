@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="MySQL5.7.6后，下载版的初始化操作备忘 &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;  As of MySQL 5.7.6, if you initialized the data directory manually using mysqld –initialize and followed the instructions in Section 2.10.1.1,">
+    <meta name="description" content="MySQL5.7.6后，下载版的初始化操作备忘 As of MySQL 5.7.6, if you initialized the data directory manually using mysqld –initialize and followed the instructions in Section 2.10.1.1, “Initializing the Data Directory M">
 <meta property="og:type" content="article">
 <meta property="og:title" content="mysql5.7非安装版本初始化">
 <meta property="og:url" content="https://blog.kuuds.me/2016/07/24/">
 <meta property="og:site_name" content="KuuDS#Dev">
-<meta property="og:description" content="MySQL5.7.6后，下载版的初始化操作备忘 &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;  As of MySQL 5.7.6, if you initialized the data directory manually using mysqld –initialize and followed the instructions in Section 2.10.1.1,">
+<meta property="og:description" content="MySQL5.7.6后，下载版的初始化操作备忘 As of MySQL 5.7.6, if you initialized the data directory manually using mysqld –initialize and followed the instructions in Section 2.10.1.1, “Initializing the Data Directory M">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2016-07-10T00:56:00.000Z">
 <meta property="article:modified_time" content="2017-01-16T13:35:07.000Z">
@@ -111,7 +111,7 @@
 
     </div>
     <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#使用-initialize-insecure"><span class="toc-number">1.</span> <span class="toc-text">使用--initialize-insecure</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#使用-initialize"><span class="toc-number">2.</span> <span class="toc-text">使用--initialize</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#MySQL5-7-6后，下载版的初始化操作备忘"><span class="toc-number">1.</span> <span class="toc-text">MySQL5.7.6后，下载版的初始化操作备忘</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#使用-initialize-insecure"><span class="toc-number">2.</span> <span class="toc-text">使用--initialize-insecure</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#使用-initialize"><span class="toc-number">3.</span> <span class="toc-text">使用--initialize</span></a></li></ol>
     </div>
   </span>
 </div>
@@ -150,9 +150,7 @@
   
 
   <div class="content" itemprop="articleBody">
-    <!--markdown-->MySQL5.7.6后，下载版的初始化操作备忘
-<p>=================================</p>
-<blockquote>
+    <h1 id="MySQL5-7-6后，下载版的初始化操作备忘"><a href="#MySQL5-7-6后，下载版的初始化操作备忘" class="headerlink" title="MySQL5.7.6后，下载版的初始化操作备忘"></a>MySQL5.7.6后，下载版的初始化操作备忘</h1><blockquote>
 <p>As of MySQL 5.7.6, if you initialized the data directory manually using mysqld –initialize and followed the instructions in Section 2.10.1.1, “Initializing the Data Directory Manually Using mysqld”, you should have assigned a password to the initial account. </p>
 </blockquote>
 <p>上文引用自<a href="http://dev.mysql.com/doc/refman/5.7/en/default-privileges.html" target="_blank" rel="noopener">MySQL文档</a><br>出于安全考虑,配置<code>my.cnf</code>后，需要输入</p>
@@ -200,7 +198,7 @@
     </div>
 
     <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#使用-initialize-insecure"><span class="toc-number">1.</span> <span class="toc-text">使用--initialize-insecure</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#使用-initialize"><span class="toc-number">2.</span> <span class="toc-text">使用--initialize</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#MySQL5-7-6后，下载版的初始化操作备忘"><span class="toc-number">1.</span> <span class="toc-text">MySQL5.7.6后，下载版的初始化操作备忘</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#使用-initialize-insecure"><span class="toc-number">2.</span> <span class="toc-text">使用--initialize-insecure</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#使用-initialize"><span class="toc-number">3.</span> <span class="toc-text">使用--initialize</span></a></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">
