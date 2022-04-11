@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="VPS设置1234567891011iptables -I INPUT 1 -m state --state RELATED,ESTABLISHED -j ACCEPT &amp;&amp; \iptables -I INPUT 2 -i lo -j ACCEPT &amp;&amp; \iptables -A INPUT -p tcp -m state --state NEW -m tcp --">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Iptables规则备忘">
+<meta property="og:url" content="https://blog.kuuds.me/2015/10/3/">
+<meta property="og:site_name" content="KuuDS@Dev">
+<meta property="og:description" content="VPS设置1234567891011iptables -I INPUT 1 -m state --state RELATED,ESTABLISHED -j ACCEPT &amp;&amp; \iptables -I INPUT 2 -i lo -j ACCEPT &amp;&amp; \iptables -A INPUT -p tcp -m state --state NEW -m tcp --">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2015-10-03T08:05:00.000Z">
+<meta property="article:modified_time" content="2017-10-19T12:00:40.000Z">
+<meta property="article:author" content="KuuDS">
+<meta property="article:tag" content="linux">
+<meta property="article:tag" content="iptables">
+<meta name="twitter:card" content="summary">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="https://www.gravatar.com/avatar/d5a4d656b589c47f905805f2f25d582b?s=16">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="https://www.gravatar.com/avatar/d5a4d656b589c47f905805f2f25d582b?s=192" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="https://www.gravatar.com/avatar/d5a4d656b589c47f905805f2f25d582b?s=180">
+          
+        
+    
+    <!-- title -->
+    <title>Iptables规则备忘</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+      
+<link rel="stylesheet" href="/css/rtl.css">
+
+    
+    <!-- rss -->
+    
+    
+<meta name="generator" content="Hexo 6.1.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/tags/">标签</a></li>
+         
+          <li><a href="/categories/">分类</a></li>
+         
+          <li><a href="/search/">搜索</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2015/11/4/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://blog.kuuds.me/2015/10/3/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://blog.kuuds.me/2015/10/3/&text=Iptables规则备忘"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://blog.kuuds.me/2015/10/3/&title=Iptables规则备忘"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://blog.kuuds.me/2015/10/3/&is_video=false&description=Iptables规则备忘"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Iptables规则备忘&body=Check out this article: https://blog.kuuds.me/2015/10/3/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://blog.kuuds.me/2015/10/3/&title=Iptables规则备忘"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://blog.kuuds.me/2015/10/3/&title=Iptables规则备忘"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://blog.kuuds.me/2015/10/3/&title=Iptables规则备忘"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://blog.kuuds.me/2015/10/3/&title=Iptables规则备忘"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://blog.kuuds.me/2015/10/3/&name=Iptables规则备忘&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://blog.kuuds.me/2015/10/3/&t=Iptables规则备忘"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#VPS%E8%AE%BE%E7%BD%AE"><span class="toc-number">1.</span> <span class="toc-text">VPS设置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AC%E5%8F%B8%E5%B7%A5%E4%BD%9C%E7%AB%99"><span class="toc-number">2.</span> <span class="toc-text">公司工作站</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Iptables规则备忘
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">KuuDS@Dev</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2015-10-03T08:05:00.000Z" itemprop="datePublished">2015-10-03</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/linux/">linux</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/iptables/" rel="tag">iptables</a>, <a class="tag-link-link" href="/tags/linux/" rel="tag">linux</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="VPS设置"><a href="#VPS设置" class="headerlink" title="VPS设置"></a>VPS设置</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">iptables -I INPUT 1 -m state --state RELATED,ESTABLISHED -j ACCEPT &amp;&amp; \</span><br><span class="line">iptables -I INPUT 2 -i lo -j ACCEPT &amp;&amp; \</span><br><span class="line">iptables -A INPUT -p tcp -m state --state NEW -m tcp --dport 80 -j ACCEPT &amp;&amp; \</span><br><span class="line">iptables -A INPUT -p tcp -m state --state NEW -m tcp --dport 443 -j ACCEPT &amp;&amp; \</span><br><span class="line">iptables -A INPUT -p tcp -m state --state NEW -m tcp --dport 22222 -j ACCEPT &amp;&amp; \</span><br><span class="line">iptables -A INPUT -p tcp --dport 80 -m limit --limit 25/minute --limit-burst 100 -j ACCEPT &amp;&amp; \</span><br><span class="line">iptables -A INPUT -p tcp --dport 443 -m limit --limit 25/minute --limit-burst 100 -j ACCEPT &amp;&amp; \</span><br><span class="line">iptables -A INPUT -p tcp --dport 22222 -m limit --limit 25/minute --limit-burst 100 -j ACCEPT &amp;&amp; \</span><br><span class="line">iptables -P INPUT DROP &amp;&amp; \</span><br><span class="line">iptables -A FORWARD -p tcp --tcp-flags SYN,ACK,FIN,RST RST -m limit --limit 6/s -j ACCEPT &amp;&amp; \</span><br><span class="line">iptables -A FORWARD -p icmp --icmp-type echo-request -m limit --limit 6/s -j ACCEPT</span><br></pre></td></tr></table></figure>
+
+<h2 id="公司工作站"><a href="#公司工作站" class="headerlink" title="公司工作站"></a>公司工作站</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">iptables -I INPUT 1 -m state --state RELATED,ESTABLISHED -j ACCEPT &amp;&amp; \</span><br><span class="line">iptables -I INPUT 2 -i lo -j ACCEPT &amp;&amp; \</span><br><span class="line">iptables -A INPUT -p tcp -m state --state NEW -m tcp --dport 22 -j ACCEPT &amp;&amp; \</span><br><span class="line">iptables -A INPUT -p tcp -m state --state NEW -m tcp --dport 80 -j ACCEPT &amp;&amp; \</span><br><span class="line">iptables -A INPUT -p tcp -m state --state NEW -m tcp --dport 443 -j ACCEPT &amp;&amp; \</span><br><span class="line">iptables -A INPUT -p tcp -m state --state NEW -m tcp --dport 3306 -j ACCEPT &amp;&amp; \</span><br><span class="line">iptables -A INPUT -p tcp -m state --state NEW -m tcp --dport 8080 -j ACCEPT &amp;&amp; \</span><br><span class="line">iptables -A INPUT -p tcp -m state --state NEW -m tcp --dport 8090 -j ACCEPT &amp;&amp; \</span><br><span class="line">iptables -A INPUT -p tcp -m state --state NEW -m tcp --dport 8100 -j ACCEPT &amp;&amp; \</span><br><span class="line">iptables -P INPUT DROP &amp;&amp; \</span><br><span class="line">iptables -A FORWARD -p tcp --tcp-flags SYN,ACK,FIN,RST RST -m limit --limit 6/s -j ACCEPT &amp;&amp; \</span><br><span class="line">iptables -A FORWARD -p icmp --icmp-type echo-request -m limit --limit 6/s -j ACCEPT &amp;&amp; \</span><br><span class="line">iptables -t nat -A PREROUTING -d 192.168.20.248 -p tcp --dport 8080 -j DNAT --to-destination 192.168.20.247:3389 &amp;&amp; \</span><br><span class="line">iptables -t nat -A POSTROUTING -d 192.168.20.247 -p tcp --dport 3389 -j SNAT --to-source 192.168.20.248</span><br></pre></td></tr></table></figure>
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/tags/">标签</a></li>
+         
+          <li><a href="/categories/">分类</a></li>
+         
+          <li><a href="/search/">搜索</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#VPS%E8%AE%BE%E7%BD%AE"><span class="toc-number">1.</span> <span class="toc-text">VPS设置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AC%E5%8F%B8%E5%B7%A5%E4%BD%9C%E7%AB%99"><span class="toc-number">2.</span> <span class="toc-text">公司工作站</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://blog.kuuds.me/2015/10/3/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://blog.kuuds.me/2015/10/3/&text=Iptables规则备忘"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://blog.kuuds.me/2015/10/3/&title=Iptables规则备忘"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://blog.kuuds.me/2015/10/3/&is_video=false&description=Iptables规则备忘"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Iptables规则备忘&body=Check out this article: https://blog.kuuds.me/2015/10/3/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://blog.kuuds.me/2015/10/3/&title=Iptables规则备忘"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://blog.kuuds.me/2015/10/3/&title=Iptables规则备忘"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://blog.kuuds.me/2015/10/3/&title=Iptables规则备忘"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://blog.kuuds.me/2015/10/3/&title=Iptables规则备忘"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://blog.kuuds.me/2015/10/3/&name=Iptables规则备忘&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://blog.kuuds.me/2015/10/3/&t=Iptables规则备忘"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2022 KuuDS
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/tags/">标签</a></li>
+         
+          <li><a href="/categories/">分类</a></li>
+         
+          <li><a href="/search/">搜索</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+
+    <!-- jquery -->
+
+<script src="/lib/jquery/jquery.min.js"></script>
+
+
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+
+<!-- clipboard -->
+
+  
+<script src="/lib/clipboard/clipboard.min.js"></script>
+
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>
