@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="command1getopts [optstring] [var name] [args]  instuctiongetopts被用于shell外壳程序解析位置参数。 [optstring]中包含需被识别出的选项；如果一个字符后加了冒号，表示该选项需要有一个用空格分隔的参数。 :和?不推荐用于选项名称。 每次getopts被执行的时候，getopts被告知一个shell参数[var name]。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="getopts from man">
+<meta property="og:url" content="https://blog.kuuds.me/2017/11/47/">
+<meta property="og:site_name" content="KuuDS@Dev">
+<meta property="og:description" content="command1getopts [optstring] [var name] [args]  instuctiongetopts被用于shell外壳程序解析位置参数。 [optstring]中包含需被识别出的选项；如果一个字符后加了冒号，表示该选项需要有一个用空格分隔的参数。 :和?不推荐用于选项名称。 每次getopts被执行的时候，getopts被告知一个shell参数[var name]。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2017-11-27T06:49:55.000Z">
+<meta property="article:modified_time" content="2017-11-27T06:50:19.000Z">
+<meta property="article:author" content="KuuDS">
+<meta property="article:tag" content="shell">
+<meta property="article:tag" content="man">
+<meta name="twitter:card" content="summary">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="https://www.gravatar.com/avatar/d5a4d656b589c47f905805f2f25d582b?s=16">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="https://www.gravatar.com/avatar/d5a4d656b589c47f905805f2f25d582b?s=192" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="https://www.gravatar.com/avatar/d5a4d656b589c47f905805f2f25d582b?s=180">
+          
+        
+    
+    <!-- title -->
+    <title>getopts from man</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+      
+<link rel="stylesheet" href="/css/rtl.css">
+
+    
+    <!-- rss -->
+    
+    
+<meta name="generator" content="Hexo 6.1.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/tags/">标签</a></li>
+         
+          <li><a href="/categories/">分类</a></li>
+         
+          <li><a href="/search/">搜索</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2017/12/48/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="/2017/11/46/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://blog.kuuds.me/2017/11/47/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://blog.kuuds.me/2017/11/47/&text=getopts from man"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://blog.kuuds.me/2017/11/47/&title=getopts from man"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://blog.kuuds.me/2017/11/47/&is_video=false&description=getopts from man"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=getopts from man&body=Check out this article: https://blog.kuuds.me/2017/11/47/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://blog.kuuds.me/2017/11/47/&title=getopts from man"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://blog.kuuds.me/2017/11/47/&title=getopts from man"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://blog.kuuds.me/2017/11/47/&title=getopts from man"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://blog.kuuds.me/2017/11/47/&title=getopts from man"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://blog.kuuds.me/2017/11/47/&name=getopts from man&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://blog.kuuds.me/2017/11/47/&t=getopts from man"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#command"><span class="toc-number">1.</span> <span class="toc-text">command</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#instuction"><span class="toc-number">2.</span> <span class="toc-text">instuction</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        getopts from man
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">KuuDS@Dev</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2017-11-27T06:49:55.000Z" itemprop="datePublished">2017-11-27</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/linux/">linux</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/man/" rel="tag">man</a>, <a class="tag-link-link" href="/tags/shell/" rel="tag">shell</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="command"><a href="#command" class="headerlink" title="command"></a>command</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">getopts</span> [optstring] [var name] [args]</span><br></pre></td></tr></table></figure>
+
+<h2 id="instuction"><a href="#instuction" class="headerlink" title="instuction"></a>instuction</h2><p><code>getopts</code>被用于shell外壳程序解析位置参数。 [optstring]中包含需被识别出的选项；如果一个字符后加了冒号，表示该选项需要有一个用空格分隔的参数。</p>
+<p><code>:</code>和<code>?</code>不推荐用于选项名称。</p>
+<p>每次<code>getopts</code>被执行的时候，<code>getopts</code>被告知一个shell参数[var name]。 如果[var name]不存在,则会初始化它，并且下一个参数的序号将被赋予<code>OPTIND</code>中处理。 当Shell或Shell脚本被<br>执行时，<code>OPTIND</code>被自动初始化为1； 在同一个shell多次调用<code>getopts</code>时，如果需要使用不同的参数，那么需要手动重置<code>OPTIND</code>。</p>
+<p>当处理完选项时，<code>getopts</code>会退出，并返回一个大于0的值。<code>OPTIND</code>将被设置为第一个非选项的参数， 而<code>name</code>被设置为<code>?</code></p>
+<p><code>getopts</code>一般解析位置参数，但如果<code>args</code>中提供了更多的参数，那么<code>getopts</code>则会去解析<code>args</code></p>
+<p><code>getopts</code>有两种方式报错。如果<code>optstring</code>的第一个字符是一个冒号, 那么将会采用静默报错。 普通操作模式时，诊断消息仅在遇到非法或缺少选项时，才会被打印。如果<code>OPTERR</code>被设置<br>为<code>0</code>，即使<code>optstring</code>的首字符为<code>:</code>，也不会显示任何报错信息。</p>
+<p>当发现一个非法选项时，<code>getopts</code>将<code>?</code>赋值到[var name]中且在非静默时， 打印一条错误信息并释放<code>OPTARG</code>变量。如果<code>getopts</code>不是静默的，那么该选项字符会被赋值给<code>OPTARG</code>并不会<br>打印任何诊断消息。</p>
+<p>如果没有发现需要的参数，且<code>getopts</code>是非静默的，那么[var name]会被赋值<code>?</code>，<code>OPTARG</code>会被unset删除，并打印一条诊断消息。如果<code>getopts</code>不是静默的，那么<code>:</code>会被赋予[var name]<br>，<code>OPTARG</code>被设置为该选项。</p>
+<p><code>getopts</code>当找一个选吸时，无论该选项是否指定，都会返回<code>true</code>。若解析完选项或遇到错误时，返回false。</p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/tags/">标签</a></li>
+         
+          <li><a href="/categories/">分类</a></li>
+         
+          <li><a href="/search/">搜索</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#command"><span class="toc-number">1.</span> <span class="toc-text">command</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#instuction"><span class="toc-number">2.</span> <span class="toc-text">instuction</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://blog.kuuds.me/2017/11/47/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://blog.kuuds.me/2017/11/47/&text=getopts from man"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://blog.kuuds.me/2017/11/47/&title=getopts from man"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://blog.kuuds.me/2017/11/47/&is_video=false&description=getopts from man"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=getopts from man&body=Check out this article: https://blog.kuuds.me/2017/11/47/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://blog.kuuds.me/2017/11/47/&title=getopts from man"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://blog.kuuds.me/2017/11/47/&title=getopts from man"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://blog.kuuds.me/2017/11/47/&title=getopts from man"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://blog.kuuds.me/2017/11/47/&title=getopts from man"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://blog.kuuds.me/2017/11/47/&name=getopts from man&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://blog.kuuds.me/2017/11/47/&t=getopts from man"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2022 KuuDS
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/tags/">标签</a></li>
+         
+          <li><a href="/categories/">分类</a></li>
+         
+          <li><a href="/search/">搜索</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+
+    <!-- jquery -->
+
+<script src="/lib/jquery/jquery.min.js"></script>
+
+
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+
+<!-- clipboard -->
+
+  
+<script src="/lib/clipboard/clipboard.min.js"></script>
+
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>
