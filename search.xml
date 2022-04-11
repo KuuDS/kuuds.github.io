@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>NVM配置ndoejs环境</title>
+      <link href="/2022/04/nvm-for-setting-node-dev-env/"/>
+      <url>/2022/04/nvm-for-setting-node-dev-env/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h2><ol><li>发行版本的node版本过低</li><li>官方apt源需要频繁手动更新</li><li>支持多个版本的node间切换</li></ol><h2 id="Step"><a href="#Step" class="headerlink" title="Step"></a>Step</h2><ol><li>安装脚本</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># install </span></span><br><span class="line">curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash</span><br><span class="line"></span><br></pre></td></tr></table></figure><ol start="2"><li>配置shell</li></ol><p>在<code>.zshrc</code>中配置插件<code>nvm</code>, 并移除安装脚本append文末的配置</p><ol start="3"><li>安装nodejs</li></ol><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm install --lts</span><br></pre></td></tr></table></figure><ol start="4"><li>安装最新版本npm</li></ol><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm install-latest-npm</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> js </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> node </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>vim-paste-toggle</title>
       <link href="/2020/03/vim-paste-toggle/"/>
       <url>/2020/03/vim-paste-toggle/</url>
