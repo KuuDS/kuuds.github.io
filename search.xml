@@ -48,6 +48,19 @@
     
     
     <entry>
+      <title>thinking-in-develop.md</title>
+      <link href="/2021/02/thinking-in-develop-md/"/>
+      <url>/2021/02/thinking-in-develop-md/</url>
+      
+        <content type="html"><![CDATA[<h2 id="开发流程中反思"><a href="#开发流程中反思" class="headerlink" title="开发流程中反思"></a>开发流程中反思</h2><ol><li>SAR文档中需要指定模块，指定</li></ol>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>vim-paste-toggle</title>
       <link href="/2020/03/vim-paste-toggle/"/>
       <url>/2020/03/vim-paste-toggle/</url>
